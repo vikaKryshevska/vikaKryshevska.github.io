@@ -20,25 +20,25 @@
       href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   </head>
 
   <body>
-    <div class="wrapper">
+   
       <!-- Header, navigation, video -->
       <header>
-        <div class="videoblock">
-          <video autoplay muted loop id="myVideo">
-            <source src="images/umbrella_video.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <h1>UMBRELLA</h1>
+  
         <nav>
-          <ul class="navigation">
-            <li><a href="#">CATALOGUE</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">LOG IN</a></li>
-          </ul>
+          <button class="my-button" id="my-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <ul class="navigation hideMenu" id="navigation">
+          <li><a class="menuItem" href="#">CATALOGUE</a></li>
+          <li><a class="menuItem"  href="#">SERVICES</a></li>
+          <li><a class="menuItem"  href="#">ABOUT US</a></li>
+          <li><a class="menuItem"  href="#">LOG IN</a></li>
+        </ul>
           <div class="logo">
              <!--<img
             src="images/logo.jpg"
@@ -50,6 +50,14 @@
         </nav>
       </header>
 
+      <div class="wrapper">
+        <div class="videoblock">
+          <video autoplay muted loop id="myVideo">
+            <source src="images/umbrella_video.mp4" type="video/mp4" />
+          </video>
+          <h1>UMBRELLA</h1>
+        </div>
+        
       <!-- First block, orange umbrella, about -->
       <div class="first_block">
         <div class="orange_umbrella">
@@ -66,6 +74,7 @@
               <div class="animation-appear animation-delay-2">Why?</div>
             </h2>
           </div>
+          <div class="textblock2">
           <div class="f3-new">
             <p data-aos="fade-up">
               Made from 100% sustainably recycled stone, and without any
@@ -77,6 +86,7 @@
           </div>
 
           <div class="findmore"></div>
+        </div>
         </div>
       </div>
 <!-- Second block, images of umbrella -->
@@ -215,7 +225,7 @@
 
       <div class="block3">
         <div class="text"  data-aos="fade-up">
-          <p> I've never done dirty things with the umbrella
+          <p> I've never done things with the umbrella
           </p>
         </div>
         <img src="images/test1.jfif"/>
@@ -241,6 +251,7 @@
     </div>
 
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="script.js"></script>
     <script>
       AOS.init({
         easing: "ease-in-quad",
