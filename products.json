@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "name": "Japanese parasol “En”",
+        "color": "Gold Flower Design",
+        "price": 287.83,
+        "element_img": ".\\new_img\\higasa_gold.jpeg",
+        "element_img1": ".\\new_img\\higasa_gold_c.jpeg"
+    },
+
+    {
+        "id": 2,
+        "name": "Sora",
+        "color": "Light Blue",
+        "price": 197.88,
+        "element_img": ".\\new_img\\sora_blue.jpeg",
+        "element_img1": ".\\new_img\\sora_blue_c.jpeg"    },
+
+    {
+        "id": 3,
+        "name": "Akatsuki Zukuyo",
+        "color": "Blue/Black",
+        "price": 611.63,
+        "element_img": ".\\new_img\\akatsuki_zukuyo_blue.jpeg",
+        "element_img1": ".\\new_img\\akatsuki_zukuyo_blue_c.jpeg"
+    },
+
+    {
+        "id": 4,
+        "name": "Fubuki",
+        "color": "White",
+        "price": 467.72,
+        "element_img": ".\\new_img\\fubuki_white.jpeg",
+        "element_img1": ".\\new_img\\fubuki_white_c.jpeg"
+        },
+
+    {
+        "id": 5,
+        "name": "KIHAJIKI(HI) / KIWAMI",
+        "color": "Red",
+        "price": 611.63,
+        "element_img": ".\\new_img\\kihajiki_red.jpeg",
+        "element_img1": ".\\new_img\\kihajiki_red_c.jpeg"
+    },
+
+    {
+        "id": 6,
+        "name": "Kogane",
+        "color": "Yellow",
+        "price": 395.76,
+        "element_img": ".\\new_img\\kogane_yellow.jpeg",
+        "element_img1": ".\\new_img\\kogane_yellow_c.jpeg"
+    },
+
+    {
+        "id": 7,
+        "name": "Paper Naturally Parasol “Black Bamboo”",
+        "color": "Pink",
+        "price": 215.86,
+        
+        "element_img": ".\\new_img\\unryu_pink.jpeg",
+        "element_img1": ".\\new_img\\unryu_pink_c.jpeg"
+    },
+
+    {
+        "id": 8,
+        "name": "Kiku Karakusa",
+        "color": "Green/Pattern",
+        "price": 260.84,
+        "element_img": ".\\new_img\\karakusa_green.jpeg",
+        "element_img1": ".\\new_img\\karakusa_green_c.jpeg"
+    }   
+
+
+]
