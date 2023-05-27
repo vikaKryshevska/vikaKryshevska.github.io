@@ -20,76 +20,90 @@
       href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
 
   <body>
-   
-      <!-- Header, navigation, video -->
-      <header>
-  
-        <nav>
-          <button class="my-button" id="my-button">
-            <i class="fas fa-bars"></i>
+    <!-- Header, navigation, video -->
+    <header>
+      <nav>
+        <button class="my-button" id="my-button">
+          <i class="fas fa-bars"></i>
         </button>
-        
+
         <ul class="navigation hideMenu" id="navigation">
           <li><a class="menuItem" href="#">CATALOGUE</a></li>
-          <li><a class="menuItem"  href="#">SERVICES</a></li>
-          <li><a class="menuItem"  href="#">ABOUT US</a></li>
-          <li><a class="menuItem"  href="#">LOG IN</a></li>
+          <li><a class="menuItem" href="#">SERVICES</a></li>
+          <li><a class="menuItem" href="#">ABOUT US</a></li>
+          <li><a class="menuItem" href="#">LOG IN</a></li>
         </ul>
-          <div class="logo">
-             <!--<img
+        <div class="logo">
+          <!--<img
             src="images/logo.jpg"
               style="position: absolute; width: 4.5%"
               ,
               style="float: left" -->
-            
-          </div>
-        </nav>
-      </header>
-
-      <div class="wrapper">
-        <div class="videoblock">
-          <video autoplay muted loop id="myVideo">
-            <source src="images/umbrella_video.mp4" type="video/mp4" />
-          </video>
-          <h1>UMBRELLA</h1>
         </div>
-        
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <div class="videoblock">
+        <video autoplay muted loop id="myVideo">
+          <source
+            src="images/umbrella_video.mp4"
+            type="video/mp4"
+            alt="Rain video"
+          />
+        </video>
+        <h1>UMBRELLA</h1>
+      </div>
+
       <!-- First block, orange umbrella, about -->
       <div class="first_block">
         <div class="orange_umbrella">
-          <img src="images/orange_umbrella.avif" />
+          <img src="images/orange_umbrella.avif" alt="Orange umbrella" />
         </div>
         <div class="content">
           <div class="textblock1">
-            <h2 class="f1-new" data-aos="fade-up">
+            <div class="f1-new" data-aos="fade-up">
               <div class="animation-appear animation-delay-2">
                 Our design process starts with a simple question.
               </div>
-            </h2>
-            <h2 class="f2-new" data-aos="fade-up">
+            </div>
+            <div class="f2-new" data-aos="fade-up">
               <div class="animation-appear animation-delay-2">Why?</div>
-            </h2>
+            </div>
           </div>
           <div class="textblock2">
-          <div class="f3-new">
-            <p data-aos="fade-up">
-              Made from 100% sustainably recycled stone, and without any
-              bleaches or acids, Karst Stone Paper™ is rebuilt from first
-              principles to be better than wood-pulp paper: more durable, more
-              sustainable, and infinitely smoother to write, scribble, doodle or
-              draw on.
-            </p>
-          </div>
+            <div class="f3-new">
+              <p data-aos="fade-up">
+                Made from 100% sustainably recycled stone, and without any
+                bleaches or acids, Karst Stone Paper™ is rebuilt from first
+                principles to be better than wood-pulp paper: more durable, more
+                sustainable, and infinitely smoother to write, scribble, doodle
+                or draw on.
+              </p>
+            </div>
 
-          <div class="findmore"></div>
-        </div>
+            <div class="findmore"></div>
+          </div>
         </div>
       </div>
-<!-- Second block, images of umbrella -->
+      <!-- Second block, images of umbrella -->
       <div class="historyc_umbrellas">
         <div class="about">
           <p class="text1">Bestsellers</p>
@@ -98,9 +112,8 @@
           </p>
         </div>
 
-        
-        <ul class="elements" id="products-list">
-       <!--  <div class="elements">
+        <div class="elements" id="products-list">
+          <!--  <div class="elements">
           <div class="element">
             <div class="element_img">
               <img src="images/umbrella_closed1.jpeg" />
@@ -220,36 +233,182 @@
               </div>
             </div>
           </div> -->
-        </ul>
+        </div>
       </div>
 
       <!-- Third block, image of umbrella  and text-->
 
       <div class="block3">
-        <div class="text"  data-aos="fade-up">
-          <p> I've never done things with the umbrella
-          </p>
+        <div class="text" data-aos="fade-up">
+          <p>I've never done things with the umbrella</p>
         </div>
-        <img src="images/test1.jfif"/>
-    
+        <img src="images/test1.jfif" />
       </div>
-
 
       <!-- Forth block, image of umbrella  and text-->
-      <div class="block4"> 
+      <div class="block4">
         <div class="text">
-            <p>Our paper is 100% tree-free.</p>
+          <p>Our paper is 100% tree-free.</p>
         </div>
         <div class="slide_block">
-          <div class="slider">
+          <div class="carousel-container">
+            <div class="navigation">
+              <div class="prev nav-btn"><</div>
+              <div class="next nav-btn">></div>
+            </div>
+            <div class="carousel">
+              <div class="item main">
+                <div class="item_img">
+                  <img src="images/umbrella_open1.png" />
+                </div>
+                <div class="info">
+                  <div class="name">umbrella_closed1</div>
+                  <div class="info1">
+                    <div class="color">black</div>
+                    <div class="year">1003</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_img">
+                  <img src="images/umbrella_open2.jpeg" />
+                </div>
 
+                <div class="info">
+                  <div class="name">umbrella_closed2</div>
+                  <div class="info1">
+                    <div class="color">yellow</div>
+                    <div class="year">1043</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="slide_text">
-            <p>Made from sustainably recycled stone, and without any bleaches or acids, Karst Stone Paper™ is rebuilt from first principles to be better than wood-pulp paper: more durable, more sustainable, and infinitely smoother to write, scribble, doodle or draw on. If there’s a better way to make paper, we haven’t found it. And if we do, we’ll be sure to let you know.</p>
+            <p>
+              Made from sustainably recycled stone, and without any bleaches or
+              acids, Karst Stone Paper™ is rebuilt from first principles to be
+              better than wood-pulp paper: more durable, more sustainable, and
+              infinitely smoother to write, scribble, doodle or draw on. If
+              there’s a better way to make paper, we haven’t found it. And if we
+              do, we’ll be sure to let you know.
+            </p>
           </div>
         </div>
       </div>
 
+
+      <div class="block5">
+    
+        <img src="images/japanese_wonan_with_umbrella1.png" />  
+          <div class="text" data-aos="fade-up">
+          <p>Impossibly smooth.</p>
+        </div>
+
+
+        <div class="text2" data-aos="fade-up">
+          <p>Our paper baffles the senses. The lack of plant fibers and grain direction makes writing effortless and hand-cramp free. </p>
+        </div>
+      </div>
+
+      <div class="block6">
+        <div class="text_block">
+          <h2>Karst Stone Paper™ is better</h2>
+          <p>It’s possible to make paper without waste. Without chlorine or acid. Without water. Without trees. Made from recycled
+             stone and without any bleaches, acids, or trees, Karst Stone Paper™ is rebuilt from first principles to be better.</p>
+             <p>That means more durable, more sustainable, and infinitely smoother to write, scribble, doodle or draw on. 
+              If there's a better way to make paper, we haven’t found it. Yet.</p>
+        </div>
+
+        <div class="slide_block">
+          <div class="carousel-container">
+            <div class="navigation">
+              <div class="prev nav-btn"><</div>
+              <div class="next nav-btn">></div>
+            </div>
+            <div class="carousel">
+              <div class="item main">
+                
+              </div>
+              <div class="item">
+               
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+
+
+
+      <div class="footer-clean">
+        <footer>
+          <div class="container">
+            <div class="col">
+              <h2 class="mainFooterTitle">Instruments</h2>
+              <h4 class="mainFooterTitle2">
+                Your one-stop place for all things umbrella.
+              </h4>
+              <div class="rounded-social-buttons">
+                <a
+                  class="social-button facebook"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  class="social-button twitter"
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="social-button linkedin"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                  class="social-button youtube"
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a
+                  class="social-button instagram"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col">
+              <h2>Services</h2>
+              <ul>
+                <li><a href="#">Web design</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Hosting</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h2>About</h2>
+              <ul>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Legacy</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h2>Careers</h2>
+              <ul>
+                <li><a href="#">Job openings</a></li>
+                <li><a href="#">Employee success</a></li>
+                <li><a href="#">Benefits</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>

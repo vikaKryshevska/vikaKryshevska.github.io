@@ -4,8 +4,8 @@
         "name": "Japanese parasol “En”",
         "color": "Gold Flower Design",
         "price": 287.83,
-        "element_img": ".\\new_img\\higasa_gold.jpeg",
-        "element_img1": ".\\new_img\\higasa_gold_c.jpeg"
+        "element_img": "new_img/higasa_gold.jpeg",
+        "element_img1": "new_img/higasa_gold_c.jpeg"
     },
 
     {
@@ -13,8 +13,8 @@
         "name": "Sora",
         "color": "Light Blue",
         "price": 197.88,
-        "element_img": ".\\new_img\\sora_blue.jpeg",
-        "element_img1": ".\\new_img\\sora_blue_c.jpeg"    },
+        "element_img": "/new_img/sora_blue.jpeg",
+        "element_img1": "/new_img/sora_blue_c.jpeg"    },
 
     {
         "id": 3,

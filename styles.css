@@ -12,9 +12,7 @@ body {
     width: fit-content;
     display: flex;
     background: linear-gradient(#f8f5f0, #ffffff);
-    font-family: var(--rt)
-        /*'Poppins', sans-serif*/
-    ;
+    font-family: var(--rt) ;
     
     padding: 0;
     margin: 0;
@@ -101,11 +99,12 @@ h1{
   nav{
     background-color: #f8f5f0;
     width: 100%;
+    height: 6rem;
     position: fixed;
     margin: 0;
     padding: 0;  
     flex-wrap: wrap;
-    z-index: 1;
+    z-index: 5;
   }
 .navigation {
    
@@ -130,26 +129,25 @@ h1{
     color: rgb(67, 66, 66);
 }
 
-.logo img {
-    width: 100.5%;
-    margin-top: -0%;
-    position: absolute;
-    list-style: none;
-    margin-left: -1%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content:space-between;
-
-    mix-blend-mode: multiply;
-}
 
 .navigation a:hover {
-    background: darkgrey;
-}
+    border-top: none;
+    animation-name: coloring;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  border-radius: 15px;
+  border-width: 5px;
 
-.navigation li:last-of-type a {
-    border-bottom: none;
+ 
 }
+@keyframes coloring{
+    0%   {border-color: rgb(143, 141, 139);}
+    25%  {border-color: rgb(180, 110, 49);}
+    50%  {border-color: rgb(241, 198, 133);}
+    75% {border-color:rgb(162, 100, 65);}
+    100% {border-color: rgb(143, 141, 139);}
+  }
+
 
 
 /* medium sized screens */
@@ -254,16 +252,17 @@ h2 {
 .textblock1 {
 
     font-weight: 400;
+    font-size: 2rem;
+    color: #000;
     justify-content: flex-start;
-    margin-left: 4em;
+    margin-left: 2rem;
     width:40%;
-    font-size: 1.5vw;
     font-weight: 300;
     line-height:1.5;
 }
 .textblock2 {
     width:100%;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     font-weight: 300;
     text-align: start;
 
@@ -316,7 +315,7 @@ h2 {
     font-weight: 300;
     line-height:1.5;
     margin: 0;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 .textblock2 p{
@@ -326,7 +325,7 @@ h2 {
     font-weight: 300;
     margin-top: 21vw;
     text-align: start;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
     
     .content .findmore{
@@ -373,9 +372,10 @@ img {
 
 .historyc_umbrellas .about{
     height: 30vw;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    display: flex;
+   
     margin-bottom: 10vw;
     font-weight: 300;
 }
@@ -384,13 +384,13 @@ img {
     font-size: 3vw;
     margin-top: 4vw;
     margin-left: 1.5rem;
-    width:40%;
+    width:32%;
 }
 .about .text2{
     font-size: 2.5vw;
     margin-top: 4vw;
-    margin-left: 1.5rem;
     text-align: start;
+    width:60%;
 }
 
 
@@ -471,7 +471,6 @@ img {
     flex-direction: row;
     font-size: 1.2vw;
     display:flex;
-
     justify-content: space-between;
   }
 
@@ -486,10 +485,13 @@ img {
     }
 
     .about .text1{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+
+    margin-left: 0.5rem;
     }
     .about .text2{
-        font-size: 2.5rem;
+        font-size: 1.3rem;
+        width:60%;
     }
     .elements>* {
         flex: 0 0 100%;
@@ -502,10 +504,10 @@ img {
     }
     .info .name{
     
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       .info .info1{
-        font-size: 1.8rem;
+        font-size: 1.3rem;
       }
     .element_img img{
         width: 60%;
@@ -521,7 +523,7 @@ img {
 
 
 /* THIRD BLOCK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!START */
-.block3{
+.block3, .block5{
     position: relative;
     display: flex;
   
@@ -529,13 +531,14 @@ img {
 
 }
 
-.block3 img{
+.block3 img, .block5 img{
     width: 100%;
 }
 
 .block3 .text{
     position:absolute;
     width: 50%;
+    margin-left: 3rem;
     margin-top: 12vw;
     font-size: 3vw;
     font-weight: 500;
@@ -561,13 +564,154 @@ img {
 .block4{
     display: flex;
     flex-direction: row;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
     
 }
 
 .block4 .text{
-    width:50%;
+    width:90%;
+    font-size: 1.8rem;
+    margin-left: 1rem;
     
 }
+
+.slide_text{
+    margin-top: -7rem;
+    position: relative;
+}
+
+
+.slide_block{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.carousel-container {
+    width: 60%;
+    height: 70vw;
+    position: relative;
+    margin: 0 auto;
+
+    transition: all 1s ease;
+  
+  }
+
+
+  .navigation .prev {
+    position: absolute;
+    z-index: 2;
+    font-size: 25px;
+    top: 30%;
+    left: 1px;
+    font-weight: 700;
+  }
+  .navigation .next {
+    right: 1px;
+    position: absolute;
+    font-size: 25px;
+    z-index: 2;
+    top: 30%;
+  }
+  .navigation .nav-btn {
+    background: rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  }
+  .navigation .nav-btn:hover {
+    background: white;
+  }
+
+
+  .carousel {
+    margin-top: 20px;
+    transition: 1.3s ;
+    width: 90%;
+    height: 100%;
+  
+  }
+
+
+
+ 
+.carousel  .item{
+    width: 90%;
+  position: absolute;
+  display: none;
+     
+
+}
+.carousel .item  .item_img img{
+    position: relative;
+    width: 100%;
+    transition: all 0.3s ease;
+    border:8px solid white;
+}
+
+
+
+  .carousel .item .info{
+    position: relative;
+    bottom: 0;
+    width: 103%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+  }
+  .carousel .item .info .name{
+    
+    font-size: 1.7rem;
+  }
+  .carousel .item .info .info1{
+  
+    flex-direction: row;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .carousel  .main {
+    display: block;
+  }
+
+@media all and (max-width: 800px) {
+
+
+    .slide_text{
+        margin-top: 10rem;
+        margin-left: 1rem;
+    }
+    .carousel-container {
+        width: 80%;
+        height: 60vw;
+        position: relative;
+        margin: 0 auto;
+    
+        transition: all 1s ease;
+      
+      }
+
+      .navigation .prev, .navigation .next {
+  
+        top: 60%;
+      }
+       
+    
+
+}
+
 
 
 
@@ -578,3 +722,228 @@ img {
     }
 
 }
+
+
+
+/*      BLOCK 5      COPY OF     BLOCK    3*/
+
+
+
+.block5{
+    flex-direction: column;
+}
+
+.block5 .text{
+    position:absolute;
+    margin-left: 3rem;
+    width: 50%;
+    margin-top: 20vw;
+    font-size: 3vw;
+    font-weight: 500;
+    color: rgb(225, 219, 219);
+    z-index: 1;
+
+}
+
+
+.block5 .text2{
+     position:absolute;
+    width: 40%;
+    margin-left: 3rem;
+    margin-top: 50vw;
+    font-size: 2vw;
+    font-weight: 500;
+    color: rgb(225, 219, 219);
+    z-index: 1;
+}
+
+
+
+@media all and (max-width: 800px) {
+
+    .block5 .text{
+        margin-top: 5vw;
+        font-size: 2rem;
+        color: #f8f6f6;
+        font-weight: 900;
+        
+    }
+    .block5 .text2{
+        width: 80%;
+        margin-top: 100vw;
+        font-size: 1.5rem;
+
+    }
+
+    .block5 img{
+        width: 100%;
+        height: 170vw;
+        object-fit: cover;
+    }
+}
+
+
+/*      BLOCK 6      COPY OF     BLOCK    4    WITH         SLIDER*/
+
+.block6{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.block6 .text_block{
+    width: 40%;
+}
+
+.block6 .slide_block{
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h2{
+    color: #faf7f7;
+}
+.footer-clean .container{
+
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7%;
+    justify-content: space-evenly;
+
+}
+  .footer-clean {
+       font-family: 'Cardo';
+       position: relative;
+    margin-top: 1vw;
+    padding-top: 0;
+    font-weight: 300;
+    background-color:#090909;
+    color:#767778;
+  }
+  
+  .footer-clean h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:1.4rem;
+  }
+  
+  .footer-clean ul {
+    flex-direction: row;
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:1rem;
+    margin-bottom:0;
+  }
+  
+  .footer-clean ul a {
+    flex-direction: column;
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-clean ul a:hover {
+    opacity:1;
+  }
+  
+  
+  @media (max-width:767px) {
+    .footer-clean .item {
+      text-align:start;
+      padding-bottom:20px;
+    }
+
+
+  }
+  
+  .col{
+    text-align: start;
+  }
+
+
+  
+  .footer-clean .copyright {
+    margin-top:14px;
+    margin-bottom:0;
+    font-size:1rem;
+    opacity:0.6;
+}
+
+
+.rounded-social-buttons {
+    text-align: center;
+  }
+  
+  .rounded-social-buttons .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  
+  .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+  }
+  
+  .rounded-social-buttons .social-button.facebook,
+  .rounded-social-buttons .social-button.twitter,
+  .rounded-social-buttons .social-button.linkedin,
+  .rounded-social-buttons .social-button.instagram,
+  .rounded-social-buttons .social-button.youtube  {
+
+    background: #f8f5f0;
+    color: #000;
+    border-color: #000;
+  }
+  
+  .rounded-social-buttons .social-button.linkedin:hover, .social-button.youtube, .rounded-social-buttons .social-button.linkedin:focus,
+  .rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus,
+  .rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus,
+  .rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus,
+  .rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+    color: #f8f5f0;
+    background: #f59a4f;
+    border-color: #f59a4f;
+  }
+  
+  
+
+
+
