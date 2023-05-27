@@ -577,26 +577,24 @@ img {
     
 }
 
-.slide_text{
-    margin-top: -7rem;
-    position: relative;
-}
 
 
 .slide_block{
     position: relative;
     display: flex;
     flex-direction: column;
+    
 }
 
-
-.carousel-container {
+.slide_text{
+    position: relative;
+    margin-left: 1rem;
+}
+.slider-container {
     width: 60%;
     height: 70vw;
     position: relative;
     margin: 0 auto;
-
-    transition: all 1s ease;
   
   }
 
@@ -604,36 +602,34 @@ img {
   .navigation .prev {
     position: absolute;
     z-index: 2;
-    font-size: 25px;
-    top: 30%;
+    font-size: 2rem;
+    top: 80%;
     left: 1px;
-    font-weight: 700;
   }
   .navigation .next {
-    right: 1px;
     position: absolute;
-    font-size: 25px;
+    font-size: 2rem;
     z-index: 2;
-    top: 30%;
+    top: 80%;
+    right: 1px;
   }
   .navigation .nav-btn {
-    background: rgba(255, 255, 255, 0.55);
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 10%;
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    
   }
   .navigation .nav-btn:hover {
     background: white;
   }
 
 
-  .carousel {
+  .slider {
     margin-top: 20px;
     transition: 1.3s ;
     width: 90%;
@@ -644,14 +640,16 @@ img {
 
 
  
-.carousel  .item{
-    width: 90%;
+.slider  .item{
+    width: 95%;
   position: absolute;
   display: none;
-     
+  background: #e7e7e7;
+  padding-right: 5%;
+  transition: 2s;
 
 }
-.carousel .item  .item_img img{
+.slider .item  .item_img img{
     position: relative;
     width: 100%;
     transition: all 0.3s ease;
@@ -660,7 +658,7 @@ img {
 
 
 
-  .carousel .item .info{
+  .slider .item .info{
     position: relative;
     bottom: 0;
     width: 103%;
@@ -670,30 +668,36 @@ img {
     flex-direction: column;
     font-weight: 600;
   }
-  .carousel .item .info .name{
+  .slider .item .info .name{
     
     font-size: 1.7rem;
   }
-  .carousel .item .info .info1{
+  .slider .item .info .info1{
   
     flex-direction: row;
     font-size: 1.5rem;
     display: flex;
+    align-content: space-between;
     justify-content: space-around;
   }
 
-  .carousel  .main {
+  .slider  .main {
     display: block;
   }
 
+
+
 @media all and (max-width: 800px) {
 
+    .block4{
+        flex-direction: column;
 
+    }
     .slide_text{
-        margin-top: 10rem;
+        margin-top: 25rem;
         margin-left: 1rem;
     }
-    .carousel-container {
+    .slider-container {
         width: 80%;
         height: 60vw;
         position: relative;
@@ -705,23 +709,32 @@ img {
 
       .navigation .prev, .navigation .next {
   
-        top: 60%;
+        top: 180%;
       }
-       
+
     
 
 }
 
 
-
-
-@media all and (max-width: 800px) {
-    .block4{
-        flex-direction: column;
-
+@media all and (max-width: 415px) {
+    .slider-container {
+        width: 80%;
+        height: 110vw;
     }
 
-}
+    .navigation .prev, .navigation .next {
+        top: 100%;
+      }
+
+      .slide_text{
+        margin-top: 1rem;
+    }
+  }
+
+
+
+
 
 
 
