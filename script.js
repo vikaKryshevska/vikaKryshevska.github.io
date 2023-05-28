@@ -110,6 +110,58 @@ function nextImage(direction) {
   images[index].classList.add('main');
 }
 
+
+
+
+fetch('slider.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+              appendDataSlider(data)
+            })
+             
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+function appendDataSlider(data) {
+       var sliderContainer = document.getElementById('slider-list');
+        for (var i = 0; i < data.length; i++) {                  
+          sliderContainer.appendChild(createSliderElement(data[i]));
+          } 
+       }
+
+  function createSliderElement(slider) {
+    const sliderElement = document.createElement('div');
+    if(slider.id==11){
+      sliderElement.classList.add('main');
+    }
+      sliderElement.classList.add('item');
+
+   
+    sliderElement.innerHTML = `
+
+      <div class='item_img'>
+      <img src="${slider.element_img}" />
+    </div>
+    <div class='info'>
+         
+            <div class="name">${slider.name}</div>
+             <div class='info1'>
+                <div class="color">${slider.color}</div>
+                <div class="year">${slider.price}</div>
+              </div>
+            </div>
+      
+      `;
+
+    return sliderElement;
+  }
+
+
+
+
 /* function myFunction() {
   var x = document.getElementById("navigation");
   if (x.style.display === "block") {
