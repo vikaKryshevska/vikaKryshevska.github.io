@@ -1,4 +1,3 @@
-
 const menu = document.querySelector(".navigation");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger= document.querySelector(".my-button");
