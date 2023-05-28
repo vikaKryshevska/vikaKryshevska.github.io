@@ -653,7 +653,7 @@ img {
 
 
 
-.slider  .item{
+.slider  .item, .slider  .main{
   width: 95%;
 position: absolute;
 display: none;
@@ -662,7 +662,7 @@ padding-right: 5%;
 transition: 2s;
 
 }
-.slider .item  .item_img img{
+.slider   .item_img img{
   position: relative;
   width: 100%;
   transition: all 0.3s ease;
@@ -671,7 +671,7 @@ transition: 2s;
 
 
 
-.slider .item .info{
+.slider .info{
   position: relative;
   bottom: 0;
   width: 103%;
@@ -681,11 +681,11 @@ transition: 2s;
   flex-direction: column;
   font-weight: 600;
 }
-.slider .item .info .name{
+.slider  .name{
   
   font-size: 1.7rem;
 }
-.slider .item .info .info1{
+.slider  .info1{
 
   flex-direction: row;
   width: 100%;
