@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <head>
+        <meta charset="UTF-8" />
+    
+        <meta name="description" content="Free Data About Umbrella">
+        <meta name="keywords" content="Umbrella, Japanese, Historyc Umbrellas">
+        <meta name="author" content="Kryshevska Viktoriia">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+        <title>Umbrella story</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Tienne&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossorigin="anonymous"
+        />
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="icon" type="image/jpeg" href="images/icon1.jpeg"/>
+    
+      </head>
+
+<body>
+    <header>
+        <nav>
+          <button class="my-button" id="my-button">
+            <i class="fas fa-bars"></i>
+          </button>
+  
+          <ul class="navigation hideMenu" id="navigation">
+            <li><a class="menuItem" href="#">HOME</a></li>
+            <li><a class="menuItem" href="#">CATALOGUE</a></li>
+            <li><a class="menuItem" href="#">ABOUT</a></li>
+            <li><a class="menuItem" href="#">LOG IN</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+  <div class="wrapper">
+    
+
+    <div class="search">
+      <input type="text" class="searchTerm" id="search-term" placeholder="Search Product, Category ..." />
+      <button type="submit" class="searchButton" id="search-name-button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+
+
+
+    <div class="text1" style="margin-top: 8%">
+      <p>CATALOGUE</p>
+      <div class="number_of_products">
+        <p id="product-count">117 Products</p>
+      </div>
+    </div>
+
+
+    <section class="choise">
+      <ul class="list_">
+        <li class="list_item">
+          <input class="checkbox-round" type="checkbox" id="low-high" />
+          <label for="check1" id="low-high"><span></span>Price (Low > High)</label>
+        </li>
+
+        <li class="list_item">
+          <input class="checkbox-round" type="checkbox" id="high-low" />
+          <label for="check2"><span></span> Price (High > Low)</label>
+        </li>
+      </ul>
+
+      <ul class="list_">
+        <li class="list_item">
+          <input class="checkbox-round" type="checkbox" id="a-z" />
+          <label for="check3"><span></span> Name (A - Z)</label>
+        </li>
+        <li class="list_item">
+          <input class="checkbox-round" type="checkbox" id="z-a" />
+          <label for="check4"><span></span> Name (Z - A)</label>
+        </li>
+      </ul>
+
+    </section>
+
+    <div class="text2">
+      <p>Categories</p>
+    </div>
+
+    <div class="conteiner">
+      <section class="content">
+
+
+
+        <div class="card">
+          <h4 style="text-align: start">Price</h4>
+          <div class="range-slider">
+            <input type="range" class="min-price" value="1000" min="99" max="85000" step="450" id="min-price" />
+            <input type="range" class="max-price" value="90000" min="85000" max="170000" step="450" id="max-price" />
+            <div class="slider-gap"></div> <!-- Проміжок між повзунками -->
+          </div>
+
+          <div class="price-content">
+            <div class="minmax">
+              <label for="Min" id="min-val">Min</label>
+              <input type="text" id="Min" name="MinPrice" placeholder="100₴" />
+            </div>
+
+            <div class="minmax">
+              <label for="Max" id="max-val">Max</label>
+              <input type="text" id="Max" name="MaxPrice" placeholder="10000₴" />
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="apply" id="apply-filters-button">Apply</button>
+            <button class="reset" id="reset-filters-button">Reset</button>
+          </div>
+        </div>
+
+      </section>
+
+      <ul class="products" id="products-list">
+
+        <!--
+          <li class="product">
+ 
+              <img class="itemi" src="products/Alfabeto.png" alt="product" />
+              <h3>Guitars</h3>
+              <div class="category">test category</div>
+              <div class="price">5000$</div>
+              <button class="buy_now">Buy now</button>
+
+          </li>          
+          -->
+
+      </ul>
+
+    </div>
+
+    <div class="footer-clean">
+        <footer>
+          <div class="container">
+            <div class="col">
+              <h2 class="mainFooterTitle">Instruments</h2>
+              <h4 class="mainFooterTitle2">
+                Your one-stop place for all things umbrella.
+              </h4>
+              <div class="rounded-social-buttons">
+                <a
+                  class="social-button facebook"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  class="social-button twitter"
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="social-button linkedin"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                  class="social-button youtube"
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a
+                  class="social-button instagram"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col">
+              <h2>Services</h2>
+              <ul>
+                <li><a href="#">Web design</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Hosting</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h2>About</h2>
+              <ul>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Legacy</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h2>Careers</h2>
+              <ul>
+                <li><a href="#">Job openings</a></li>
+                <li><a href="#">Employee success</a></li>
+                <li><a href="#">Benefits</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
+    </script>
+<script src="script.js"></script>
+</body>
+
+</html>

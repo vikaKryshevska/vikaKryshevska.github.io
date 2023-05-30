@@ -62,7 +62,7 @@ function appendData(data) {
             <div class="name">${product.name}</div>
              <div class='info1'>
                 <div class="color">${product.color}</div>
-                <div class="year">${product.price}</div>
+                <div class="year">${product.price}$</div>
               </div>
             </div>
       
