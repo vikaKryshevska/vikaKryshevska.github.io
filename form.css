@@ -282,11 +282,11 @@ p {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
   
   .card-front, .card-back {
-    height: 150%;
+    height: 170%;
   }
 
   .form-style {

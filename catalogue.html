@@ -51,11 +51,14 @@
         <ul class="navigation hideMenu" id="navigation">
           <li><a href="./index.html" class="menuItem" href="#">HOME</a></li>
           <li><a class="menuItem" href="#">CATALOGUE</a></li>
-          <li><a class="menuItem" href="#">ABOUT</a></li>
+          <li><a href="./about_me.html" class="menuItem" href="#">ABOUT</a></li>
           <li><a href="./logIn.html" class="menuItem" href="#">LOG IN</a></li>
         </ul>
       </nav>
     </header>
+    <a href="#" id="scrollToTopBtn">
+      <i class="fas fa-arrow-up"></i>
+    </a>
 
     <div class="wrapper">
       <div class="search">
@@ -63,7 +66,7 @@
           type="text"
           class="searchTerm"
           id="search-term"
-          placeholder="Search Product, Category ..."
+          placeholder="Search Product or Color"
         />
         <button type="submit" class="searchButton" id="search-name-button">
           <i class="fa fa-search"></i>
@@ -72,28 +75,25 @@
 
       <div class="text1" style="margin-top: 8%">
         <p>ALL PRODUCTS</p>
-        <div class="number_of_products">
-          <p id="product-count">117 Products</p>
-        </div>
       </div>
 
   
 
       <div class="conteiner">
-        <div class="filters">
+        <div class="filters" id="filters">
           <section class="sort_by">
             <p>Sort by</p>
             <ul class="list_">
               <li class="list_item">
                 <input class="checkbox-round" type="checkbox" id="low-high" />
                 <label for="check1" id="low-high"
-                  ><span></span>Price: Low to High</label
+                  ><span></span>Low to High</label
                 >
               </li>
 
               <li class="list_item">
                 <input class="checkbox-round" type="checkbox" id="high-low" />
-                <label for="check2"><span></span> Price: High to Low</label>
+                <label for="check2"><span></span> High to Low</label>
               </li>
             </ul>
 
@@ -115,45 +115,36 @@
                 <select name="select"  id="select-color"  onfocus="this.size=6;"
                 onblur="this.size=0;"
                 onchange="this.size=1; this.blur()">
-                  <option value="" , disabled selected>ALL</option>
+                  <option value="">ALL</option>
                   <option value="Red" id="Red">Red</option>
                   <option value="Yellow" id="Yellow">Yellow</option>
                   <option value="Blue" id="Blue">Blue</option>
                   <option value="Black" id="Black">Black</option>
                   <option value="White" id="White">White</option>
-                  <option value="Other" id="Other">Other</option>
                 </select>
-                <p>Size</p>
-                <select name="select" id="select-size"    onfocus="this.size=6;"
-                onblur="this.size=0;"
-                onchange="this.size=1; this.blur()">
-                  <option value="" , disabled selected>ALL</option>
-                  <option value="Small" id="Small">Small</option>
-                  <option value="Medium" id="Medium">Medium</option>
-                  <option value="Large" id="Large">Large</option>
-                </select>
+               
         
           </section>
- <h4 style="text-align: start">Price</h4>
+ <p>Price</p>
           <div class="card">
            
             <div class="range-slider">
               <input
                 type="range"
                 class="min-price"
-                value="1000"
+                value="100"
                 min="99"
-                max="85000"
-                step="450"
+                max="500"
+                step="20"
                 id="min-price"
               />
               <input
                 type="range"
                 class="max-price"
-                value="90000"
-                min="85000"
-                max="170000"
-                step="450"
+                value="1000"
+                min="500"
+                max="1000"
+                step="20"
                 id="max-price"
               />
               <div class="slider-gap"></div>
@@ -189,7 +180,7 @@
           </div>
         </div>
 
-        <section class="content">
+        <section class="content" id="content">
 
             <div class="elements" id="products-list">
       

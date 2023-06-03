@@ -204,7 +204,7 @@
 
 .historyc_umbrellas .about {
 
-  flex-direction: column;
+  flex-direction: row;
 }
 
 }

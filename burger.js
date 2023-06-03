@@ -20,3 +20,24 @@ menuItems.forEach(
     menuItem.addEventListener("click", toggleMenu);
   }
 )
+
+
+var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Показати або приховати стрілку під час прокрутки
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+// Плавна прокрутка на початок сторінки при кліку на стрілку
+scrollToTopBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
