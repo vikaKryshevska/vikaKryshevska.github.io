@@ -1,169 +1,3 @@
-:root {
-    --rt: 'Cardo';
-  }
-  
-  
-  
-  .header {
-    position: fixed;
-  }
-  
-  body {
-    width: fit-content;
-    display: flex;
-    background: linear-gradient(#f8f5f0, #ffffff);
-    font-family: var(--rt) ;
-    
-    padding: 0;
-    margin: 0;
-  }
-  a,button{
-    cursor: pointer;
-  }
-  
-  body::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
-  }
-  
-  
-  /* main layout */
-  .wrapper {
-  
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    text-align: start;
-  }
-  
-  .wrapper>* {
-    flex: 1 100%;
-  }
-  
-  /* NAVIGATION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-  
-  
-  .my-button {
-    background-color: transparent;
-    border: 10px;
-    color: black;
-    cursor: pointer;
-    font-size: 30px;
-    width: 100px;
-    height: 50px;
-    float: left;
-    line-height: 70px;
-    display: none;
-  }
-  
-  .my-button:focus {
-    outline: none;
-  }
-  
-  nav{
-    background-color: #f8f5f0;
-    width: 100%;
-    height: 6rem;
-    position: fixed;
-    margin: 0;
-    padding: 0;  
-    flex-wrap: wrap;
-    z-index: 5;
-  }
-  .navigation {
-   
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  
-  }
-  
-  #active:checked ~ nav{
-    clip-path: circle(75%);
-  }
-  
-  .navigation a {
-  
-    font-size: 1.5rem;
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    display: block;
-    color: rgb(67, 66, 66);
-  }
-  
-  
-  .navigation a:hover {
-    border-top: none;
-    animation-name: coloring;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  border-radius: 15px;
-  border-width: 5px;
-  
-  
-  }
-  @keyframes coloring{
-    0%   {border-color: rgb(143, 141, 139);}
-    25%  {border-color: rgb(180, 110, 49);}
-    50%  {border-color: rgb(241, 198, 133);}
-    75% {border-color:rgb(162, 100, 65);}
-    100% {border-color: rgb(143, 141, 139);}
-  }
-  
-  
-  
-  /* medium sized screens */
-  
-  @media (max-width: 800px) {
-    nav{
-        height: 5rem;
-        position: fixed;
-        display: flex;
-        justify-content:start;
-        flex-direction: row;
-        align-content: start;
-  
-    }
-    .navigation {
-        flex-direction: column;
-        
-    }
-    .navigation a {
-        width: 100%;
-        background: transparent;
-        
-    }
-    
-    .my-button {
-      display: block;
-    }
-  
-    .hideMenu,  .showMenu  {
-        margin: 0;
-        margin-top: 1.8rem;
-        transition: 1s;
-        transform: rotateY(90deg);
-        background-color: #f8f5f0;
-        box-shadow:-1px 0px 3px 0px rgba(0, 0, 0, 0.75);
-        width: 100%;
-  
-    }
-  
-    .hideMenu {
-    
-        transform: rotateY(90deg);}
-  
-    .showMenu {
-        transform: rotateY(0deg);
-      
-      }
-  }
-  
-
-/* NAVIGATION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!END */
 
 
 /* SEARCH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!START */
@@ -201,7 +35,7 @@
   
 
 .searchTerm:focus {
-    color: #B28A48;
+    color: #8d2908;
 }
 
 .searchButton {
@@ -257,8 +91,42 @@ flex-grow: 0;
 
 
 
+section{
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  margin-bottom: 1em;
+  padding: .25em;
+  border: 0;
+  border-bottom: 2px solid currentcolor; 
+  font-weight: bold;
+  letter-spacing: .15em;
+  mix-blend-mode: multiply;
+
+  border-radius: 0;
+  &:focus, &:active {
+    outline: 0;
+    border-bottom-color: #9a2918;
+  }
+}
 
 
+
+
+select option:hover {
+  box-shadow: 0 0 10px 100px #9a2918 inset;
+  color:white;
+}
+select option:checked{
+  box-shadow: 0 0 10px 100px #9a2918 inset;
+  }
+
+  option:checked,
+  option:hover {
+    background-color: #9a2918;
+  }
 
 .conteiner {
     flex-direction: row;
@@ -279,7 +147,12 @@ flex-grow: 0;
 
 .filters p{
     text-align:left;
-    margin-left: 20%;
+}
+
+.filter_by{
+  justify-content: center;
+  
+  margin-left: 20%;
 }
 
 .sort_by {
@@ -347,7 +220,7 @@ flex-grow: 0;
 }
 
 .checkbox-round:checked {
-    background-color: rgb(18, 18, 18);
+    background-color: #831a0a;
 }
 
 
@@ -416,8 +289,8 @@ li {
 
 .card {
     flex-shrink: 0;
-    width: 18vw;
-    padding: 1vw;
+    width: 80%;
+    margin-left: 20%;
 }
 
 .card h4{
@@ -426,13 +299,14 @@ li {
 }
 
 .minmax{
+  margin-top: 2rem;
     font-size: 1vw; font-weight: 500;
 }
 .price-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4vw;
+    margin-top: 4rem;
     align-items: flex-start;
     text-align: left;
 
@@ -466,10 +340,11 @@ li {
 
 input[type=range] {
     -webkit-appearance: none;
-    width: 100%;
+    width: 70%;
     background: transparent;
     position: absolute;
     left: 0;
+    margin-bottom: 2rem;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -494,20 +369,19 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 .buttons {
-    margin-top: 6vw;
+    margin-top: 3vw;
     position: relative;
 
 }
 
 
 .buttons button {
-    margin-left: 2vw;
     position: relative;
     font-family: 'Poppins';
     font-style: normal;
     border-radius: 10px;
     border: none;
-    font-size: 1vw;
+    font-size: 1rem;
     line-height: 113%;
     width: 6vw;
     height: 3vw;
@@ -515,10 +389,10 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 .apply {
-    background: #46760A;
+    background: #802909;
 
     color: #e6e6e6;
-    border: 3.0476px solid #46760A;
+    border: 3.0476px solid #8c300b;
     border-radius: 18.2856px;
 }
 
@@ -564,6 +438,37 @@ input[type=range]::-webkit-slider-runnable-track {
     margin-right: 0vw;
     flex-shrink: 0;
     width: 75%;
+    white-space: nowrap; /* Забороняє перенесення тексту на новий рядок */
+    overflow: hidden; /* Ховає невлізлий текст */
+    text-overflow: ellipsis; 
+}
+
+.elements {
+
+justify-content: left;
+}
+
+.element {
+  height: fit-content;
+}
+
+
+
+.info .info1{
+  flex-direction: column;
+}
+
+
+.buy{
+  width: 40%;
+  margin-left: 55%;
+  height: 10%;
+  font-size: 1rem;
+  position: relative;
+  background: #5d1408;
+  color: #e6e6e6;
+  border: 3.0476px solid #7f1d0e;
+  border-radius: 18.2856px;
 
 }
 
@@ -572,344 +477,5 @@ input[type=range]::-webkit-slider-runnable-track {
 
 
 
-.elements {
-    width: 90%;
-    height: fit-content;
-    display: flex;
-    flex-wrap:  wrap;
-    min-width: 0;
-    margin-left: 5vw;
-    justify-content: space-around;
-    background-color: rgb(244, 250, 255);
   
-  }
-  
-  .elements>* {
-    flex: 0 0 25%;
-  }
-  
-  
-  .element{
-    
-    display: block;
-    box-sizing: border-box;
-    min-width: 0;
-    max-width: 100%;
-    flex-wrap:wrap;
-    height: 27vw;
-    
-    justify-content: space-around;
-    margin-bottom: 3vw;
-    flex-direction: column;
-    padding: 1vw;
-    transition-duration: 1s;
-     
-  
-  }
-  .element_img img{
-    
-    position: relative;
-    margin: auto;
-    justify-content: center;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    transition-duration: 1s;
-  }
-  
-  .element .element_img:nth-of-type(2) {
-    display: none;
-    transition-duration: 1s;
-  }
-  
-  .element:hover .element_img:nth-of-type(1) {
-    display: none;
-    transition-duration: 1s;
-  }
-  
-  .element:hover .element_img:nth-of-type(2) {
-    display: inline-block;
-    transition-duration: 1s;
-  }
-  
-  .element:hover {
-  
-    background-color: rgb(234, 236, 238);
-  }
-  
-  .info{
-    font-weight: 600;
-  }
-  .info .name{
-    
-    font-size: 1.5vw;
-  }
-  .info .info1{
-    flex-direction: row;
-    font-size: 1.2vw;
-    display:flex;
-    justify-content: space-between;
-  }
-  
-  .historyc_umbrellas .button_block{
-    justify-content: end;
-    display: flex;
-  }
-  
-  .historyc_umbrellas .findout{
-    position: relative;
-    display: flex;
-    width: 30%;
-    height: 4rem;
-    right: auto;
-    left: auto;
-    bottom: 2vw;
-    justify-content: center;
-    padding-top: 2%;
-    background-color: #cb2507;
-    color: #f8f5f0;
-  
-  }
-  
-  @media all and (max-width: 1000px ) {
-    .historyc_umbrellas .about {
-        flex-wrap: wrap;
-        flex-direction: column;
-        flex: 100%;
-        margin-bottom: 10vw;
-        max-width: 99%;
-        margin-left: 1rem;
-    }
-  
-    .about .text1{
-        font-size: 1.5rem;
-  
-    margin-left: 0rem;
-    }
-    .about .text2{
-        font-size: 1.3rem;
-        width:60%;
-    }
-  
-    .elements>* {
-        flex: 0 0 45%;
-    }
-  
-    .element{
-        height: fit-content;
-    margin-bottom: 5vw;
-    margin-left: 2vw;
-    border-radius: 10px;
-    border: 2px solid #fef3e5;
-  
-    
-    }
-    .info .name{
-    
-        font-size: 1.5rem;
-      }
-      .info .info1{
-        font-size: 1.3rem;
-      }
-    .element_img img{
-        width: 60%;
-    }
-    .element:hover .element_img {
-       display: none;
-      }
-      .element:hover .element_img:nth-of-type(2) {
-        display:grid;
-        transition-duration: 1s;
-      }
-      .historyc_umbrellas .button_block{
-        justify-content: center;
-      }
-      .historyc_umbrellas .findout{
-        justify-content: right;
-        padding-top: 4%;
-        padding-right: 2rem;
-        width: 85%;
-      }
-  }
-  
-  
-  @media all and (max-width: 800px) {
-  .elements>* {
-    flex: 0 0 100%;
-  }
-  }  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-h2{
-    color: #faf7f7;
-  }
-  .footer-clean .container{
-  
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 7%;
-    justify-content: space-evenly;
-  
-  }
-  .footer-clean {
-       font-family: 'Cardo';
-       position: relative;
-    margin-top: 1vw;
-    padding-top: 0;
-    font-weight: 300;
-    background-color:#090909;
-    color:#767778;
-  }
-  
-  .footer-clean h3 {
-    margin-top:0;
-    margin-bottom:12px;
-    font-weight:bold;
-    font-size:1.4rem;
-  }
-  
-  .footer-clean ul {
-    flex-direction: row;
-    padding:0;
-    list-style:none;
-    line-height:1.6;
-    font-size:1rem;
-    margin-bottom:0;
-  }
-  
-  .footer-clean ul a {
-    flex-direction: column;
-    color:inherit;
-    text-decoration:none;
-    opacity:0.8;
-  }
-  
-  .footer-clean ul a:hover {
-    opacity:1;
-  }
-  
-  
-  @media (max-width:767px) {
-    .footer-clean .item {
-      text-align:start;
-      padding-bottom:20px;
-    }
-  
-  
-  }
-  
-  .col{
-    text-align: start;
-  }
-  
-  
-  
-  .footer-clean .copyright {
-    margin-top:14px;
-    margin-bottom:0;
-    font-size:1rem;
-    opacity:0.6;
-  }
-  
-  
-  .rounded-social-buttons {
-    text-align: center;
-  }
-  
-  .rounded-social-buttons .social-button {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 3.125rem;
-    height: 3.125rem;
-    border: 0.125rem solid transparent;
-    padding: 0;
-    text-decoration: none;
-    text-align: center;
-    color: #fefefe;
-    font-size: 1.5rem;
-    font-weight: normal;
-    line-height: 2em;
-    border-radius: 1.6875rem;
-    transition: all 0.5s ease;
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
-    -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  
-  .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
-    margin-top: 0.8rem;
-    font-size: 1.5rem;
-  }
-  
-  .rounded-social-buttons .social-button.facebook,
-  .rounded-social-buttons .social-button.twitter,
-  .rounded-social-buttons .social-button.linkedin,
-  .rounded-social-buttons .social-button.instagram,
-  .rounded-social-buttons .social-button.youtube  {
-  
-    background: #f8f5f0;
-    color: #000;
-    border-color: #000;
-  }
-  
-  .rounded-social-buttons .social-button.linkedin:hover, .social-button.youtube, .rounded-social-buttons .social-button.linkedin:focus,
-  .rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus,
-  .rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus,
-  .rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus,
-  .rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
-    color: #f8f5f0;
-    background: #f59a4f;
-    border-color: #f59a4f;
-  }
-  
-  
-  
-  
-  
-  
+ 

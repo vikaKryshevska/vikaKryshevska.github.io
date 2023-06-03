@@ -1,0 +1,218 @@
+:root {
+  --rt: 'Cardo';
+}
+
+
+
+.header {
+  position: fixed;
+}
+
+body {
+  width: fit-content;
+  display: flex;
+  background: linear-gradient(#f8f5f0, #ffffff);
+  font-family: var(--rt) ;
+  
+  padding: 0;
+  margin: 0;
+}
+a,button{
+  cursor: pointer;
+}
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+
+
+/* main layout */
+.wrapper {
+
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  text-align: start;
+
+}
+
+.wrapper>* {
+  flex: 1 100%;
+}
+
+.videoblock
+{
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#myVideo{
+
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  object-fit:fill;
+}
+
+
+h1{
+  position:absolute;
+  top: 23vw;
+  line-height: 50px;
+  /* or 104% */
+  font-size: 5vw;
+  letter-spacing: 0.2em;
+  color: aliceblue;
+  display: flex;
+
+}
+
+img {
+    position: relative;
+    mix-blend-mode: multiply;
+  }
+
+/* NAVIGATION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.my-button {
+  background-color: transparent;
+  border: 10px;
+  color: black;
+  cursor: pointer;
+  font-size: 30px;
+  width: 100px;
+  height: 50px;
+  float: left;
+  line-height: 70px;
+  display: none;
+}
+
+.my-button:focus {
+  outline: none;
+}
+
+nav{
+  background-color: #f8f5f0;
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  margin: 0;
+  padding: 0;  
+  flex-wrap: wrap;
+  z-index: 5;
+}
+.navigation {
+ 
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#active:checked ~ nav{
+  clip-path: circle(75%);
+}
+
+.navigation a {
+
+  font-size: 1.5rem;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: block;
+  color: rgb(67, 66, 66);
+}
+
+
+.navigation a:hover {
+  border-top: none;
+  animation-name: coloring;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+border-radius: 15px;
+border-width: 5px;
+
+
+}
+@keyframes coloring{
+  0%   {border-color: rgb(143, 141, 139);}
+  25%  {border-color: rgb(180, 110, 49);}
+  50%  {border-color: rgb(241, 198, 133);}
+  75% {border-color:rgb(162, 100, 65);}
+  100% {border-color: rgb(143, 141, 139);}
+}
+
+
+
+/* medium sized screens */
+
+@media (max-width: 800px) {
+  nav{
+      height: 5rem;
+      position: fixed;
+      display: flex;
+      justify-content:start;
+      flex-direction: row;
+      align-content: start;
+
+  }
+  .navigation {
+      flex-direction: column;
+      
+  }
+  .navigation a {
+      width: 100%;
+      background: transparent;
+      
+  }
+  
+  .my-button {
+    display: block;
+  }
+
+  .hideMenu,  .showMenu  {
+      margin: 0;
+      margin-top: 1.8rem;
+      transition: 1s;
+      transform: rotateY(90deg);
+      background-color: #f8f5f0;
+      box-shadow:-1px 0px 3px 0px rgba(0, 0, 0, 0.75);
+      width: 100%;
+
+  }
+
+  .hideMenu {
+  
+      transform: rotateY(90deg);}
+
+  .showMenu {
+      transform: rotateY(0deg);
+    
+    }
+}
+
+
+
+
+
+
+/* NAVIGATION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!END */
+
+
+header{
+  margin-bottom: -0.1em;
+}
+
+a{
+  color: #000;
+}
+
+

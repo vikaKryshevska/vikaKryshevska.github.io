@@ -1,32 +1,3 @@
-const menu = document.querySelector(".navigation");
-const menuItems = document.querySelectorAll(".menuItem");
-const hamburger= document.querySelector(".my-button");
-
-function toggleMenu() {
-  if (menu.classList.contains("showMenu")) {
-    menu.classList.remove("showMenu");
-    menu.classList.add("hideMenu");
-   
-  } else {
-    menu.classList.add("showMenu");
-    menu.classList.remove("hideMenu");
-  }
-}
-
-hamburger.addEventListener("click", toggleMenu);
-
-menuItems.forEach( 
-  function(menuItem) { 
-    menuItem.addEventListener("click", toggleMenu);
-  }
-)
-
-
-
-
-
-
-
 fetch('products.json')
             .then(function (response) {
                 return response.json();
@@ -75,41 +46,51 @@ function appendData(data) {
 
 
 
-
   const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-const images = document.querySelector('.slider').children;
-const totalImages = images.length;
-let index = 0;
-
-prev.addEventListener('click', () => {
-  nextImage('next');
-})
-
-next.addEventListener('click', () => {
-  nextImage('prev');
-})
-
-function nextImage(direction) {
-  if(direction == 'next') {
-    index++;
-    if(index == totalImages) {
-      index = 0;
-    }
-  } else {
-    if(index == 0) {
-      index = totalImages - 1;
+  const next = document.querySelector('.next');
+  const images = document.querySelector('.slider').children;
+  let index = 0;
+  let data = [];
+  
+  prev.addEventListener('click', () => {
+    nextImage('prev');
+  });
+  
+  next.addEventListener('click', () => {
+    nextImage('next');
+  });
+  
+  async function loadImages() {
+    const response = await fetch('slider.json');
+    data = await response.json();
+  
+    nextImage('next');
+  }
+  
+  function nextImage(direction) {
+    if (direction === 'next') {
+      index++;
+      if (index === data.length) {
+        index = 0;
+      }
     } else {
-      index--;
+      if (index === 0) {
+        index = data.length - 1;
+      } else {
+        index--;
+      }
     }
-  }
-
-  for(let i = 0; i < images.length; i++) {
-    images[i].classList.remove('main');
-  }
-  images[index].classList.add('main');
-}
-
+  
+    for (let i = 0; i < images.length; i++) {
+      images[i].classList.remove('main');
+      images[i].classList.remove('fade-in');
+    }
+  
+    images[index].classList.add('main');
+    images[index].classList.add('fade-in');
+  }  
+  
+  loadImages();
 
 
 
@@ -162,11 +143,75 @@ function appendDataSlider(data) {
 
 
 
-/* function myFunction() {
-  var x = document.getElementById("navigation");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
+
+
+
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+   
+    var currentSlide = slides[slideIndex];
+    
+    // Сховати попередній слайд
+    if (currentSlide) {
+      currentSlide.style.animation = "slide-out 1s ease-in-out forwards";
+      currentSlide.addEventListener("animationend", function() {
+        this.style.display = "none";
+        this.style.animation = ""; // Скидаємо анімацію
+      });
+    }
+    
+    // Збільшуємо індекс слайда
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    
+    // Відображення нового слайда
+    var newSlide = slides[slideIndex];
+    newSlide.style.display = "block";
+
+
+    var images = newSlide.getElementsByTagName("img");
+  var imageIndex = 0;
+
+  // Зміна зображень кожні 0.5 секунди
+  function changeImage() {
+    var currentImage = images[imageIndex];
+    if (currentImage) {
+      currentImage.style.opacity = 0;
+      imageIndex++;
+      if (imageIndex >= images.length) {
+        imageIndex = 0;
+      }
+    }
+    var newImage = images[imageIndex];
+    newImage.style.opacity = 1;
   }
-} */
+
+  // Запускаємо зміну зображень кожну 0.5 секунди
+  setInterval(changeImage, 500);
+
+
+
+  
+    newSlide.style.animation = "slide-in 1s ease-in-out forwards";
+
+
+
+    newSlide.addEventListener("animationend", function() {
+      this.style.display = "block";
+      this.style.animation = ""; // Скидаємо анімацію
+    });
+    setTimeout(showSlides, 5000); // Змінює слайд кожні 5 секунд
+  }
+
+  /*Застосовується анімація slide-in для появи нового слайда,
+   а потім через 5 секунд спрацьовує таймер, щоб застосувати 
+   анімацію slide-out для поточного слайда. Після закінчення анімації, 
+   слайд приховується, а анімація знімається. Потім встановлюється таймаут 
+   на 5 секунд перед викликом функції showSlides знову, щоб продовжувати змінювати слайди. */
+  

@@ -1,0 +1,178 @@
+
+/* FIRST BLOCK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.first_block{
+  position: relative;
+  display:flex;
+  flex-flow: row ;
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+
+}
+
+.orange_umbrella{
+  position: relative;
+  width:180%;
+ 
+  margin: 0;
+}
+
+.orange_umbrella img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+
+.first_block .content{
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+h2 {
+text-align: start;
+}
+
+
+.textblock1 {
+
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000;
+  justify-content: flex-start;
+  margin-left: 2rem;
+  width:40%;
+  font-weight: 300;
+  line-height:1.5;
+}
+.textblock2 {
+  width:100%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: start;
+
+
+}
+
+.textblock2 p{
+  margin-left: 35%;
+  margin-bottom: 4vw;
+}
+
+.findmore{
+  width: 100%;
+  height: 12vw;
+  background: #5d1408;
+  display: flex;
+}
+
+.findout
+{
+  position: absolute;
+  width: 25%;
+  height: 6%;
+  bottom: 8%;
+  right: 2rem;
+  border-radius: 35px;
+  background-color: #f8f5f0;
+  color: #10100f;
+  text-align:center;
+  justify-content: center;
+  padding-top: 1vw;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+
+
+@media all and (max-width: 1000px) {
+  .orange_umbrella {
+      flex-flow: row wrap;
+      width: 100%;
+  }
+  .first_block{
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      flex: 100%;
+      max-width: 99%;
+  }
+  .orange_umbrella img{
+      width: 100vw;
+      height: 35vw;
+      object-fit: cover;
+  }
+  
+.first_block .content{
+  position: relative;
+
+  margin: 0;
+}
+
+.content .textblock1 {
+  font-family: Cardo, serif;
+  font-weight: 400;
+  justify-content: flex-start;
+  width:90%;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height:1.5;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.textblock2 p{
+
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 300;
+  margin-top: 21vw;
+  text-align: start;
+  margin-left: 1rem;
+}
+  
+
+  .content .findmore{
+      width: 100vw;
+      height: 5rem;
+      margin-left:0%;
+      background: firebrick;
+     
+      justify-content: center;
+      padding-top: 0;
+      display: none;
+  }
+
+  .findout
+{
+  width: 90vw;
+  height: 2.8rem;
+  right: auto;
+  font-size: 1.4rem;
+  font-weight: 500;
+  bottom: 3%;
+}
+
+
+  h1{
+
+      top: 12rem;
+      font-size: 2rem;
+      align-self: center;
+      margin-left: 0;
+  }
+}
+
+
+@media all and (max-width: 600px) {
+
+  h1{
+
+      top: 5rem;
+  }
+}
+
+/* FIRST BLOCK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!END */

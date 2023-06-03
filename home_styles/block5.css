@@ -1,0 +1,57 @@
+
+/*      BLOCK 5      COPY OF     BLOCK    3*/
+
+
+
+.block5{
+  flex-direction: column;
+}
+
+.block5 .text{
+  position:absolute;
+  margin-left: 3rem;
+  width: 50%;
+  margin-top: 20vw;
+  font-size: 3vw;
+  font-weight: 500;
+  color: rgb(225, 219, 219);
+  z-index: 1;
+
+}
+
+
+.block5 .text2{
+   position:absolute;
+  width: 40%;
+  margin-left: 3rem;
+  margin-top: 50vw;
+  font-size: 2vw;
+  font-weight: 500;
+  color: rgb(225, 219, 219);
+  z-index: 1;
+}
+
+
+
+@media all and (max-width: 800px) {
+
+  .block5 .text{
+      margin-top: 5vw;
+      font-size: 2rem;
+      color: #f8f6f6;
+      font-weight: 900;
+      
+  }
+  .block5 .text2{
+      width: 80%;
+      margin-top: 100vw;
+      font-size: 1.5rem;
+
+  }
+
+  .block5 img{
+      width: 100%;
+      height: 170vw;
+      object-fit: cover;
+  }
+}

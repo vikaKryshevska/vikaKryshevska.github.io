@@ -1,0 +1,38 @@
+/* THIRD BLOCK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!START */
+.block3, .block5{
+  position: relative;
+  display: flex;
+
+  justify-content: start;
+
+}
+
+.block3 img, .block5 img{
+  width: 100%;
+  
+  object-fit: cover;
+}
+
+.block3 .text{
+  position:absolute;
+  width: 50%;
+  margin-left: 3rem;
+  margin-top: 12vw;
+  font-size: 3vw;
+  font-weight: 500;
+  color: rgb(225, 219, 219);
+  z-index: 1;
+
+}
+
+
+
+@media all and (max-width: 800px) {
+  .block3 .text {
+      width: 50%;
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height:1.5;
+  }
+
+}

@@ -1,0 +1,210 @@
+
+
+
+/* SECOND BLOCK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!START */
+.historyc_umbrellas{
+
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex;
+  width: 90%;
+  margin-bottom: 5vw;
+}
+
+.historyc_umbrellas .about{
+  height: 30vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ 
+  margin-bottom: 10vw;
+  font-weight: 300;
+}
+
+.about .text1{
+  font-size: 3vw;
+  margin-top: 4vw;
+  margin-left: 1.5rem;
+  width:32%;
+}
+.about .text2{
+  font-size: 2.5vw;
+  margin-top: 4vw;
+  text-align: start;
+  width:60%;
+}
+
+
+
+.elements {
+  width: 90%;
+  height: 200%;
+  display: flex;
+  flex-wrap:  wrap;
+  min-width: 0;
+  margin-left: 5vw;
+  justify-content: space-around;
+  background-color: rgb(244, 250, 255);
+
+}
+
+.elements>* {
+  flex: 0 0 25%;
+}
+
+
+.element{
+  
+  display: block;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  flex-wrap:wrap;
+  height: 27vw;
+  
+  justify-content: space-around;
+  margin-bottom: 3vw;
+  flex-direction: column;
+  padding: 1vw;
+  transition-duration: 1s;
+   
+
+}
+.element_img img{
+  
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  transition-duration: 1s;
+}
+
+.element .element_img:nth-of-type(2) {
+  display: none;
+}
+
+.element:hover .element_img:nth-of-type(1) {
+  display: none;
+}
+
+.element:hover .element_img:nth-of-type(2) {
+  display: inline-block;
+}
+
+.element:hover {
+
+  background-color: rgb(234, 236, 238);
+}
+
+.info{
+  font-weight: 600;
+}
+.info .name{
+  
+  font-size: 1.5vw;
+}
+.info .info1{
+  flex-direction: row;
+  font-size: 1.2vw;
+  display:flex;
+  justify-content: space-between;
+}
+
+.historyc_umbrellas .button_block{
+  justify-content: end;
+  display: flex;
+}
+
+.historyc_umbrellas .findout{
+  position: relative;
+  display: flex;
+  width: 30%;
+  height: 4rem;
+  right: auto;
+  left: auto;
+  bottom: 2vw;
+  justify-content: center;
+  padding-top: 2%;
+  background-color: #5d1408;
+  color: #f8f5f0;
+
+}
+.historyc_umbrellas .findout a{
+  color: #e7e7e7;
+}
+
+@media all and (max-width: 1000px ) {
+  .historyc_umbrellas .about {
+      flex-wrap: wrap;
+      flex-direction: row;
+      flex: 100%;
+      margin-bottom: 10vw;
+      max-width: 99%;
+      margin-left: 1rem;
+  }
+
+  .about .text1{
+      font-size: 1.7rem;
+      width:60%;
+  margin-left: 0rem;
+  }
+  .about .text2{
+      font-size: 1.4rem;
+      width:60%;
+  }
+
+  .elements>* {
+      flex: 0 0 45%;
+  }
+
+  .element{
+      height: fit-content;
+  margin-bottom: 5vw;
+  margin-left: 2vw;
+  border-radius: 10px;
+  border: 2px solid #fef3e5;
+
+  
+  }
+  .info .name{
+  
+      font-size: 1.5rem;
+    }
+    .info .info1{
+      font-size: 1.3rem;
+    }
+  .element_img img{
+      width: 60%;
+  }
+  .element:hover .element_img {
+     display: none;
+    }
+    .element:hover .element_img:nth-of-type(2) {
+      display:grid;
+      transition-duration: 1s;
+    }
+    .historyc_umbrellas .button_block{
+      justify-content: center;
+    }
+    .historyc_umbrellas .findout{
+      justify-content: right;
+      padding-top: 4%;
+      padding-right: 2rem;
+      width: 85%;
+    }
+}
+
+
+@media all and (max-width: 800px) {
+.elements>* {
+  flex: 0 0 100%;
+}
+
+.historyc_umbrellas .about {
+
+  flex-direction: column;
+}
+
+}

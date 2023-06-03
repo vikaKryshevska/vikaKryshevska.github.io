@@ -9,7 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Umbrella story</title>
+
+    <link rel="stylesheet" type="text/css" href="home_styles/main_settings.css" />
+    <link rel="stylesheet" type="text/css" href="home_styles/footer.css" />
+    <link rel="stylesheet" type="text/css" href="home_styles/block2.css" />
     <link rel="stylesheet" type="text/css" href="style_catalogue.css" />
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -46,7 +52,7 @@
           <li><a href="./index.html" class="menuItem" href="#">HOME</a></li>
           <li><a class="menuItem" href="#">CATALOGUE</a></li>
           <li><a class="menuItem" href="#">ABOUT</a></li>
-          <li><a class="menuItem" href="#">LOG IN</a></li>
+          <li><a href="./logIn.html" class="menuItem" href="#">LOG IN</a></li>
         </ul>
       </nav>
     </header>
@@ -102,12 +108,14 @@
               </li>
             </ul>
           </section>
-
+<p>Filter by</p>
           <section class="filter_by">
-            <p>Filter by</p>
+            
             <p>Color</p>
-                <select name="select"  id="select-color">
-                  <option value="" , disabled selected>All</option>
+                <select name="select"  id="select-color"  onfocus="this.size=6;"
+                onblur="this.size=0;"
+                onchange="this.size=1; this.blur()">
+                  <option value="" , disabled selected>ALL</option>
                   <option value="Red" id="Red">Red</option>
                   <option value="Yellow" id="Yellow">Yellow</option>
                   <option value="Blue" id="Blue">Blue</option>
@@ -116,7 +124,9 @@
                   <option value="Other" id="Other">Other</option>
                 </select>
                 <p>Size</p>
-                <select name="select" id="select-size">
+                <select name="select" id="select-size"    onfocus="this.size=6;"
+                onblur="this.size=0;"
+                onchange="this.size=1; this.blur()">
                   <option value="" , disabled selected>ALL</option>
                   <option value="Small" id="Small">Small</option>
                   <option value="Medium" id="Medium">Medium</option>
@@ -124,9 +134,9 @@
                 </select>
         
           </section>
-
+ <h4 style="text-align: start">Price</h4>
           <div class="card">
-            <h4 style="text-align: start">Price</h4>
+           
             <div class="range-slider">
               <input
                 type="range"
@@ -276,6 +286,7 @@
       integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="script_catalogue.js"></script>
+     <script src="burger.js"></script>
   </body>
 </html>

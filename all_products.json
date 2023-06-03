@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "name": "Japanese parasol “En”",
+        "color": "Gold Flower Design",
+        "price": 287.83,
+        "element_img": "new_img/higasa_gold.jpeg",
+        "element_img1": "new_img/higasa_gold_c.jpeg"
+    },
+
+    {
+        "id": 2,
+        "name": "Sora",
+        "color": "Light Blue",
+        "price": 197.88,
+        "element_img": "/new_img/sora_blue.jpeg",
+        "element_img1": "/new_img/sora_blue_c.jpeg"    },
+
+    {
+        "id": 3,
+        "name": "Akatsuki Zukuyo",
+        "color": "Blue/Black",
+        "price": 611.63,
+        "element_img": ".\\new_img\\akatsuki_zukuyo_blue.jpeg",
+        "element_img1": ".\\new_img\\akatsuki_zukuyo_blue_c.jpeg"
+    },
+
+    {
+        "id": 4,
+        "name": "Fubuki",
+        "color": "White",
+        "price": 467.72,
+        "element_img": ".\\new_img\\fubuki_white.jpeg",
+        "element_img1": ".\\new_img\\fubuki_white_c.jpeg"
+        },
+
+    {
+        "id": 5,
+        "name": "KIHAJIKI(HI) / KIWAMI",
+        "color": "Red",
+        "price": 611.63,
+        "element_img": ".\\new_img\\kihajiki_red.jpeg",
+        "element_img1": ".\\new_img\\kihajiki_red_c.jpeg"
+    },
+
+    {
+        "id": 6,
+        "name": "Kogane",
+        "color": "Yellow",
+        "price": 395.76,
+        "element_img": ".\\new_img\\kogane_yellow.jpeg",
+        "element_img1": ".\\new_img\\kogane_yellow_c.jpeg"
+    },
+
+    {
+        "id": 7,
+        "name": "Paper Naturally Parasol “Black Bamboo”",
+        "color": "Pink",
+        "price": 215.86,
+        
+        "element_img": ".\\new_img\\unryu_pink.jpeg",
+        "element_img1": ".\\new_img\\unryu_pink_c.jpeg"
+    },
+
+    {
+        "id": 8,
+        "name": "Kiku Karakusa",
+        "color": "Green/Pattern",
+        "price": 260.84,
+        "element_img": ".\\new_img\\karakusa_green.jpeg",
+        "element_img1": ".\\new_img\\karakusa_green_c.jpeg"
+    }  , 
+
+    {
+        "id": 9,
+        "name": "Kurenai(Red/Pattern) / Japanese Parasol EN Series",
+        "color": "Red/Pink",
+        "price": 227.92,
+        "element_img": "new_img/kurenai.jpg",
+        "element_img1": "new_img/kurenai_c.jpg"
+    },
+
+    {
+        "id": 10,
+        "name": "Hisui (White) / Specially selected Kurotani Washi",
+        "color": "White",
+        "price": 729.34,
+        "element_img": "/new_img/hisui.jpg",
+        "element_img1": "/new_img/hisui_c.jpg"    },
+
+    
+    {
+        "id": 11,
+        "name": "Bangasa",
+        "color": "White/Black",
+        "price": 319.09,
+        "element_img": "new_img/bangasa.jpg",
+        "element_img1": "new_img/bangasa_c.jpg"
+    },
+
+    {
+        "id": 12,
+        "name": "YAMABUKI / KIWAMI",
+        "color": "Yellow",
+        "price": 592.59,
+        "element_img": "/new_img/yamabuki.jpg",
+        "element_img1": "/new_img/yamabuki_c.jpg"    },
+
+    {
+        "id": 13,
+        "name": "Japanese parasol “En”, Silver Flower Design",
+        "color": "Black",
+        "price": 291.73,
+        "element_img": ".\\new_img/higasa_black.jpg",
+        "element_img1": ".\\new_img/higasa_black_c.jpg"
+    },
+
+    {
+        "id": 14,
+        "name": "White and Purple / High Quality Bangasa",
+        "color": "White/Purple",
+        "price": 364.67,
+        "element_img": ".\\new_img\\bangasa_white.jpg",
+        "element_img1": ".\\new_img\\bangasa_white_c.jpg"
+        },
+
+    {
+        "id": 15,
+        "name": "Janome Pure White",
+        "color": "White",
+        "price": 319.09,
+        "element_img": ".\\new_img\\janome_jpg.jpg",
+        "element_img1": ".\\new_img\\janome_cjpg.jpg"
+    },
+
+    {
+        "id": 16,
+        "name": "Crimson（Red） / High Quality Bangasa",
+        "color": "Red",
+        "price": 346.43,
+        "element_img": ".\\new_img\\crimson.jpg",
+        "element_img1": ".\\new_img\\crimson_c.jpg"
+    },
+
+    {
+        "id": 17,
+        "name": "Matsuba(Black)/ Matte Jyanome Pattern",
+        "color": "Black",
+        "price": 638.18,
+        
+        "element_img": ".\\new_img\\matsuba.jpg",
+        "element_img1": ".\\new_img\\matsuba_c.jpg"
+    },
+
+    {
+        "id": 8,
+        "name": "Gekka(Black/Pink)/ High Quality Tsukiyakko",
+        "color": "Black/Pink",
+        "price": 619.94,
+        "element_img": ".\\new_img\\gekka.jpg",
+        "element_img1": ".\\new_img\\gekka_c.jpg"
+    }  
+
+]
