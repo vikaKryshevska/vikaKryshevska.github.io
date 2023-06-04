@@ -65,7 +65,6 @@
     font-style: normal;
     font-weight: 900;
     font-size: 2em;
-    margin-top: 4vw;
     line-height: 104%;
     letter-spacing: 0.06em;
     color: #000000;
@@ -75,6 +74,9 @@
 }
 
 
+
+
+/* FILTERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 
 section {
@@ -99,8 +101,6 @@ select {
         border-bottom-color: #9a2918;
     }
 }
-
-
 
 
 select option:hover {
@@ -213,65 +213,6 @@ option:hover {
     background-color: #831a0a;
 }
 
-
-
-
-
-
-.button--round {
-    transition: background 0.25s ease-in-out;
-    width: 2rem;
-    height: 2rem;
-    background: #5677fc;
-    border-radius: 50%;
-    box-shadow: 0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.25);
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-}
-
-.button--round i {
-    font-size: 1rem;
-    line-height: 220%;
-    vertical-align: middle;
-}
-
-.button--round:hover {
-    background: #3b50ce;
-}
-
-.button--sticky {
-    position: fixed;
-    right: 2rem;
-    top: 16rem;
-}
-
-.content {
-    animation-duration: 0.125s;
-    animation-fill-mode: both;
-    animation-name: slideUp;
-    animation-timing-function: cubic-bezier(0.25, 0, 0.125, .5);
-}
-
-@-webkit-keyframes slideUp {
-    0% {
-        transform: translateY(6.25rem);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(6.25rem);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .conteiner {
     font-size: 1.2rem;
@@ -414,33 +355,15 @@ input[type=range]::-webkit-slider-runnable-track {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* FILTER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!END */
 
 
 
 .content {
-    overflow-y: scroll;
+    animation-duration: 0.125s;
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    animation-timing-function: cubic-bezier(0.25, 0, 0.125, .5);
     position: relative;
     margin-right: 0vw;
     flex-shrink: 0;
@@ -451,6 +374,32 @@ input[type=range]::-webkit-slider-runnable-track {
     /* Ховає невлізлий текст */
     text-overflow: ellipsis;
 }
+
+
+@-webkit-keyframes slideUp {
+    0% {
+        transform: translateY(6.25rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(6.25rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
 
 .elements {
 
