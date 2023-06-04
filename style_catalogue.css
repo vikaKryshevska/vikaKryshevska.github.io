@@ -171,7 +171,6 @@ select option:checked{
     flex-direction: row;
     display: flex;
     flex-flow: wrap-reverse;
-    justify-content: space-between;
 }
 
 .label_checkbox {

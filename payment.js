@@ -1,28 +1,7 @@
-const emailField = document.querySelector('.Email input[name="email"]');
-const hideEmailBtn = document.querySelector('.Email input[type="submit"]');
-
-hideEmailBtn.addEventListener('click', function () {
-    const email = emailField.value; // Отримуємо значення введеної електронної пошти
-
-    // Перевіряємо, чи введено значення електронної пошти
-    if (email) {
-        emailField.style.display = 'none';
-        hideEmailBtn.style.display = 'none';
-        // Виводимо повідомлення з підтвердженням
-        alert(`Your email (${email}) has been successfully recorded. Thank you!`);
-    } else {
-        alert("Please enter an email!");
-    }
-});
-
-
-
 // ---------------------- PRODUCT INFO ----------------------
 
-
-
 function getProductDetails(productId) {
-    return fetch('products.json')
+    return fetch('all_products.json')
         .then(response => response.json())
         .then(products => {
             const parsedProductId = parseInt(productId, 10);
@@ -68,28 +47,6 @@ dhlCheckbox.addEventListener('change', function () {
 });
 
 
-
-// ---------------------- CHECBOX PAY METHOD ----------------------
-
-
-
-const paypalCheckbox = document.getElementById('PayPal');
-const bitcoinCheckbox = document.getElementById('Bitcoin');
-
-paypalCheckbox.addEventListener('change', function () {
-    if (paypalCheckbox.checked) {
-        bitcoinCheckbox.checked = false;
-    }
-});
-
-bitcoinCheckbox.addEventListener('change', function () {
-    if (bitcoinCheckbox.checked) {
-        paypalCheckbox.checked = false;
-    }
-});
-
-
-
 // ---------------------- SUBMIT BUTTON ----------------------
 
 
@@ -103,11 +60,7 @@ submitButton.addEventListener('click', function(event) {
     alert("You haven't agreed with our privacy policy! Check it and repeat submit.");
   } else {
     alert("Thank you for your order. Our manager will contact you soon!");
-    window.open("about.html", "_blank");  /// Відкриває сторінку "about.html"
+    window.open("index.html");  /// Відкриває сторінку "about.html"
     window.close(); // Закриває поточну сторінку
   }
 });
-
-
-
-

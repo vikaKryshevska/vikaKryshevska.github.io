@@ -31,7 +31,9 @@
     bottom: 0;
   }
   .block7 .findout{
-    width: 40%;
+    width: 45%;
+    height: 3rem;
+    display: flex;
   }
   
   .block7 .photo {
