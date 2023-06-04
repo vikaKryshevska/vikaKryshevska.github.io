@@ -10,11 +10,14 @@
 
     <title>Umbrella story</title>
 
-    <link rel="stylesheet" type="text/css" href="home_styles/main_settings.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="home_styles/main_settings.css"
+    />
     <link rel="stylesheet" type="text/css" href="home_styles/footer.css" />
     <link rel="stylesheet" type="text/css" href="home_styles/block2.css" />
     <link rel="stylesheet" type="text/css" href="style_catalogue.css" />
-
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -77,10 +80,7 @@
         <p>ALL PRODUCTS</p>
       </div>
 
-  
-
       <div class="conteiner">
-        
         <div class="filters" id="filters">
           <div class="sort_by" id="sort">
             <p>Sort by</p>
@@ -110,94 +110,93 @@
             </ul>
           </div>
 
-<div id="filter">
-  <div class="labelPrice"><p>Filter by</p>
-    <div class="buttonsSmall">
-      <button class="apply" id="apply-filters2-button">Apply</button>
-      <button class="reset" id="reset-filters2-button">Reset</button>
-    </div>
-  </div>
-          <div class="filter_by" >
-            
-            <p>Color</p>
-                <select name="select"  id="select-color"  onfocus="this.size=6;"
+          <div id="filter">
+            <div class="labelPrice">
+              <p>Filter by</p>
+              <div class="buttonsSmall">
+                <button class="apply" id="apply-filters2-button">Apply</button>
+                <button class="reset" id="reset-filters2-button">Reset</button>
+              </div>
+            </div>
+            <div class="filter_by">
+              <p>Color</p>
+              <select
+                name="select"
+                id="select-color"
+                onfocus="this.size=6;"
                 onblur="this.size=0;"
-                onchange="this.size=1; this.blur()">
-                  <option value="">ALL</option>
-                  <option value="Red" id="Red">Red</option>
-                  <option value="Yellow" id="Yellow">Yellow</option>
-                  <option value="Blue" id="Blue">Blue</option>
-                  <option value="Black" id="Black">Black</option>
-                  <option value="White" id="White">White</option>
-                </select>
-               
-        
-          </div>
-
-          <div class="card">
-          <p>Price</p>
-            <div class="range-slider">
-              <input
-                type="range"
-                class="min-price"
-                value="100"
-                min="99"
-                max="500"
-                step="20"
-                id="min-price"
-              />
-              <input
-                type="range"
-                class="max-price"
-                value="1000"
-                min="500"
-                max="1000"
-                step="20"
-                id="max-price"
-              />
-              <div class="slider-gap"></div>
-              <!-- Проміжок між повзунками -->
+                onchange="this.size=1; this.blur()"
+              >
+                <option value="">ALL</option>
+                <option value="Red" id="Red">Red</option>
+                <option value="Yellow" id="Yellow">Yellow</option>
+                <option value="Blue" id="Blue">Blue</option>
+                <option value="Black" id="Black">Black</option>
+                <option value="White" id="White">White</option>
+              </select>
             </div>
 
-            <div class="price-content">
-              <div class="minmax">
-                <label for="Min" id="min-val">Min</label>
+            <div class="card">
+              <p>Price</p>
+              <div class="range-slider">
                 <input
-                  type="text"
-                  id="Min"
-                  name="MinPrice"
-                  placeholder="100₴"
+                  type="range"
+                  class="min-price"
+                  value="100"
+                  min="99"
+                  max="500"
+                  step="20"
+                  id="min-price"
                 />
+                <input
+                  type="range"
+                  class="max-price"
+                  value="1000"
+                  min="500"
+                  max="1000"
+                  step="20"
+                  id="max-price"
+                />
+                <div class="slider-gap"></div>
+                <!-- Проміжок між повзунками -->
               </div>
 
-              <div class="minmax">
-                <label for="Max" id="max-val">Max</label>
-                <input
-                  type="text"
-                  id="Max"
-                  name="MaxPrice"
-                  placeholder="1000₴"
-                />
-              </div>
-            </div>
+              <div class="price-content">
+                <div class="minmax">
+                  <label for="Min" id="min-val">Min</label>
+                  <input
+                    type="text"
+                    id="Min"
+                    name="MinPrice"
+                    placeholder="100₴"
+                  />
+                </div>
 
-            <div class="buttons">
-              <button class="apply" id="apply-filters-button">Apply</button>
-              <button class="reset" id="reset-filters-button">Reset</button>
+                <div class="minmax">
+                  <label for="Max" id="max-val">Max</label>
+                  <input
+                    type="text"
+                    id="Max"
+                    name="MaxPrice"
+                    placeholder="1000₴"
+                  />
+                </div>
+              </div>
+
+              <div class="buttons">
+                <button class="apply" id="apply-filters-button">Apply</button>
+                <button class="reset" id="reset-filters-button">Reset</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
         <button id="toggle-sort-button">Toggle Sort</button>
         <button id="toggle-filters-button">Toggle Filters</button>
-  
-        <section class="content" id="content">
 
-            <div class="elements" id="products-list">
-      
-            </div>
-    
-        <!--  <ul class="products" id="products-list">
+        <section class="content" id="content">
+          <div class="elements" id="products-list"></div>
+
+          <!--  <ul class="products" id="products-list">
             
           <li class="product">
  
@@ -289,6 +288,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="script_catalogue.js"></script>
-     <script src="burger.js"></script>
+    <script src="burger.js"></script>
   </body>
 </html>

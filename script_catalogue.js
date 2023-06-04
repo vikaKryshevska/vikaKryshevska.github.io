@@ -1,30 +1,30 @@
 fetch('all_products.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-              appendData(data)
-            })
-             
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    appendData(data)
+  })
+
+  .catch(function (err) {
+    console.log('error: ' + err);
+  });
 
 function appendData(data) {
-       var productsContainer = document.getElementById('products-list');
-        for (var i = 0; i < data.length; i++) {                  
-          productsContainer.appendChild(createProductElement(data[i]));
-          } 
-          addBuyNowEventListeners();
-       }
+  var productsContainer = document.getElementById('products-list');
+  for (var i = 0; i < data.length; i++) {
+    productsContainer.appendChild(createProductElement(data[i]));
+  }
+  addBuyNowEventListeners();
+}
 
-       
 
-  function createProductElement(product) {
-    const productElement = document.createElement('div');
-      productElement.classList.add('element');
-      productElement.setAttribute('data-id', product.id);
-      productElement.innerHTML = `
+
+function createProductElement(product) {
+  const productElement = document.createElement('div');
+  productElement.classList.add('element');
+  productElement.setAttribute('data-id', product.id);
+  productElement.innerHTML = `
 
       <div class='element_img' >
               <img class="imgE1" src="${product.element_img}" alt="${product.name} title="${product.name}"/>
@@ -43,11 +43,11 @@ function appendData(data) {
             <button class="buy" id="${product.id}">Buy Now</button>
       `;
 
-    return productElement;
-  }
+  return productElement;
+}
 
 
-  // Отримуємо посилання на елементи DOM
+// Отримуємо посилання на елементи DOM
 const searchButton = document.getElementById('search-name-button');
 const searchInput = document.querySelector('.searchTerm');
 
@@ -79,8 +79,8 @@ function searchProducts() {
         const productColor = product.color.toLowerCase();
 
         return (
-          productName.includes(searchTerm)||
-          productColor.includes(searchTerm) 
+          productName.includes(searchTerm) ||
+          productColor.includes(searchTerm)
         );
       });
 
@@ -367,7 +367,7 @@ btn.addEventListener('click', (event) => {
       searchProductsByPrice(products, productsContainer); // Викликаємо функцію для пошуку продуктів за ціною
     })
     .catch(error => console.error(error));
-    addBuyNowEventListeners();
+  addBuyNowEventListeners();
 });
 
 
@@ -404,7 +404,7 @@ function searchProductsByPrice(products, productsContainer) {
     const productPrice = parseInt(product.price);
     const productColor = product.color.toLowerCase();
     const productName = product.name.toLowerCase();
-    return productPrice >= minPrice && productPrice <= maxPrice && (productColor.includes(searchTerm)||productName.includes(searchTerm) );
+    return productPrice >= minPrice && productPrice <= maxPrice && (productColor.includes(searchTerm) || productName.includes(searchTerm));
   });
 
   filteredProducts.forEach(product => {
@@ -428,7 +428,7 @@ function searchProductsByPrice(products, productsContainer) {
   </div>
   <button class="buy" id="${product.id}">Buy Now</button>
   `;
-  
+
 
     // Додаємо HTML-блок до контейнера
     productsContainer.appendChild(productElement);
@@ -457,21 +457,21 @@ function toggleSort() {
   if (window.innerWidth < 900) {
     filters.classList.toggle('open');
     sort.classList.toggle('open');
-   
+
   } else {
     filters.style.display = 'block';
     sort.style.display = 'block';
-   
+
   }
 }
 
 
-toggleSortButton.addEventListener('click', function() {
+toggleSortButton.addEventListener('click', function () {
   toggleSort();
 });
 
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
   if (window.innerWidth >= 900) {
     filters.style.display = 'block';
     sort.style.display = 'block';
@@ -493,11 +493,11 @@ function toggleFilters() {
   }
 }
 
-toggleFiltersButton.addEventListener('click', function() {
+toggleFiltersButton.addEventListener('click', function () {
   toggleFilters();
 });
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
   if (window.innerWidth >= 800) {
     filters.style.display = 'block';
     filter.style.display = 'block';
@@ -507,24 +507,24 @@ window.addEventListener('resize', function() {
 
 
 function ResetAll() {
-  
-    // Очищаємо значення ціни
-    document.getElementById('Min').value = '';
-    document.getElementById('Max').value = '';
-    document.getElementById('select-color').value = '';
-    // Очищаємо контейнер з продуктами
-    const productsContainer = document.getElementById('products-list');
-    productsContainer.innerHTML = '';
-  
-    // Відновлюємо всі доступні товари
-    fetch('all_products.json')
-      .then(response => response.json())
-      .then(products => {
-        products.forEach(product => {
-          const productElement = document.createElement('div');
-          productElement.classList.add('element');
-          productElement.setAttribute('data-id', product.id);
-          productElement.innerHTML = `
+
+  // Очищаємо значення ціни
+  document.getElementById('Min').value = '';
+  document.getElementById('Max').value = '';
+  document.getElementById('select-color').value = '';
+  // Очищаємо контейнер з продуктами
+  const productsContainer = document.getElementById('products-list');
+  productsContainer.innerHTML = '';
+
+  // Відновлюємо всі доступні товари
+  fetch('all_products.json')
+    .then(response => response.json())
+    .then(products => {
+      products.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.classList.add('element');
+        productElement.setAttribute('data-id', product.id);
+        productElement.innerHTML = `
           <div class="element_img">
           <img class="imgE1" src="${product.element_img}" />
         </div>
@@ -541,14 +541,14 @@ function ResetAll() {
         </div>
         <button class="buy" id="${product.id}">Buy Now</button>
         `;
-  
-          // Додаємо HTML-блок до контейнера
-          productsContainer.appendChild(productElement);
-        });
-  
-        addBuyNowEventListeners();
-      })
-      .catch(error => console.error(error));
+
+        // Додаємо HTML-блок до контейнера
+        productsContainer.appendChild(productElement);
+      });
+
+      addBuyNowEventListeners();
+    })
+    .catch(error => console.error(error));
 
 
 }
@@ -557,18 +557,14 @@ function ResetAll() {
 
 const resetButtonS = document.getElementById("reset-filters2-button");
 resetButtonS.addEventListener('click', (event) => {
-ResetAll();
+  ResetAll();
 });
 
 
 const resetButton = document.getElementById("reset-filters-button");
 resetButton.addEventListener('click', (event) => {
-ResetAll();
+  ResetAll();
 });
-
-
-
-
 
 
 

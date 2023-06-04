@@ -54,13 +54,13 @@ dhlCheckbox.addEventListener('change', function () {
 const submitButton = document.getElementById('submit-order');
 const privacyCheckbox = document.getElementById('privacy');
 
-submitButton.addEventListener('click', function(event) {
-  if (!privacyCheckbox.checked) {
-    event.preventDefault(); // Зупиняє відправку форми
-    alert("You haven't agreed with our privacy policy! Check it and repeat submit.");
-  } else {
-    alert("Thank you for your order. Our manager will contact you soon!");
-    window.open("index.html");  /// Відкриває сторінку "about.html"
-    window.close(); // Закриває поточну сторінку
-  }
+submitButton.addEventListener('click', function (event) {
+    if (!privacyCheckbox.checked) {
+        event.preventDefault(); // Зупиняє відправку форми
+        alert("You haven't agreed with our privacy policy! Check it and repeat submit.");
+    } else {
+        alert("Thank you for your order. Our manager will contact you soon!");
+        window.open("index.html");  /// Відкриває сторінку "about.html"
+        window.close(); // Закриває поточну сторінку
+    }
 });
