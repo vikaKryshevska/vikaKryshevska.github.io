@@ -367,6 +367,19 @@ btn.addEventListener('click', (event) => {
 });
 
 
+const btn2 = document.getElementById("apply-filters2-button");
+btn2.addEventListener('click', (event) => {
+  const productsContainer = document.getElementById('products-list');
+  productsContainer.innerHTML = ""; // Очистити контейнер перед виводом нових продуктів
+
+  // Завантажуємо JSON-файл зі списком продуктів
+  fetch('all_products.json')
+    .then(response => response.json())
+    .then(products => {
+      searchProductsByPrice(products, productsContainer); // Викликаємо функцію для пошуку продуктів за ціною
+    })
+    .catch(error => console.error(error));
+});
 
 
 function searchProductsByPrice(products, productsContainer) {
@@ -387,7 +400,7 @@ function searchProductsByPrice(products, productsContainer) {
     const productPrice = parseInt(product.price);
     const productColor = product.color.toLowerCase();
     const productName = product.name.toLowerCase();
-    return productPrice >= minPrice && productPrice <= maxPrice && productColor.includes(searchTerm)||productName.includes(searchTerm) ;
+    return productPrice >= minPrice && productPrice <= maxPrice && (productColor.includes(searchTerm)||productName.includes(searchTerm) );
   });
 
   filteredProducts.forEach(product => {
@@ -430,13 +443,58 @@ function searchProductsByPrice(products, productsContainer) {
 
 
 
+var toggleSortButton = document.getElementById('toggle-sort-button');
+var sort = document.getElementById('sort');
+var filters = document.getElementById('filters');
 
 
+function toggleSort() {
+  if (window.innerWidth < 900) {
+    filters.classList.toggle('open');
+    sort.classList.toggle('open');
+   
+  } else {
+    filters.style.display = 'block';
+    sort.style.display = 'block';
+   
+  }
+}
 
 
+toggleSortButton.addEventListener('click', function() {
+  toggleSort();
+});
 
 
+window.addEventListener('resize', function() {
+  if (window.innerWidth >= 900) {
+    filters.style.display = 'block';
+    sort.style.display = 'block';
+  }
+});
 
 
+var toggleFiltersButton = document.getElementById('toggle-filters-button');
+var filters = document.getElementById('filters');
+var filter = document.getElementById('filter');
 
+function toggleFilters() {
+  if (window.innerWidth < 800) {
+    filters.classList.toggle('open');
+    filter.classList.toggle('open');
+  } else {
+    filters.style.display = 'block';
+    filter.style.display = 'block';
+  }
+}
 
+toggleFiltersButton.addEventListener('click', function() {
+  toggleFilters();
+});
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth >= 800) {
+    filters.style.display = 'block';
+    filter.style.display = 'block';
+  }
+});

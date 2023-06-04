@@ -73,3 +73,14 @@
   }
 
   }  
+
+  @media all and (max-width: 500px) {
+
+    .block7 .findmore{
+      justify-content: center;
+    }
+
+    .block7 .findout{
+      width: 90%;
+    }
+  }

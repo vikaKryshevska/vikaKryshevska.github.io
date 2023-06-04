@@ -80,8 +80,9 @@
   
 
       <div class="conteiner">
+        
         <div class="filters" id="filters">
-          <section class="sort_by">
+          <div class="sort_by" id="sort">
             <p>Sort by</p>
             <ul class="list_">
               <li class="list_item">
@@ -107,9 +108,16 @@
                 <label for="check4"><span></span> Name: Z - A</label>
               </li>
             </ul>
-          </section>
-<p>Filter by</p>
-          <section class="filter_by">
+          </div>
+
+<div id="filter">
+  <div class="labelPrice"><p>Filter by</p>
+    <div class="buttonsSmall">
+      <button class="apply" id="apply-filters2-button">Apply</button>
+      <button class="reset" >Reset</button>
+    </div>
+  </div>
+          <div class="filter_by" >
             
             <p>Color</p>
                 <select name="select"  id="select-color"  onfocus="this.size=6;"
@@ -124,10 +132,10 @@
                 </select>
                
         
-          </section>
- <p>Price</p>
+          </div>
+
           <div class="card">
-           
+          <p>Price</p>
             <div class="range-slider">
               <input
                 type="range"
@@ -168,7 +176,7 @@
                   type="text"
                   id="Max"
                   name="MaxPrice"
-                  placeholder="10000₴"
+                  placeholder="1000₴"
                 />
               </div>
             </div>
@@ -179,7 +187,10 @@
             </div>
           </div>
         </div>
-
+      </div>
+        <button id="toggle-sort-button">Toggle Sort</button>
+        <button id="toggle-filters-button">Toggle Filters</button>
+  
         <section class="content" id="content">
 
             <div class="elements" id="products-list">

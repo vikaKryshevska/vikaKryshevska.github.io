@@ -99,6 +99,7 @@
 
 
 
+
 @media all and (max-width: 1000px) {
 
   .block6{
@@ -126,3 +127,15 @@
   
 }
 
+
+
+
+@media all and (max-width: 500px) {
+
+  .block6 .slide-content {
+    font-size: 1rem;
+  }
+  .block6 h2{
+    font-size: 2rem;
+  }
+}
