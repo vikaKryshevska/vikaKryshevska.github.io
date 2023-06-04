@@ -465,7 +465,7 @@ input[type=range]::-webkit-slider-runnable-track {
 #toggle-filters-button,
 #toggle-sort-button {
     display: none;
-    width: 100%;
+    width: 50%;
     height: 10%;
     font-size: 1rem;
     position: relative;
@@ -474,6 +474,7 @@ input[type=range]::-webkit-slider-runnable-track {
     border: 1.0476px solid #7f1d0e;
     border-radius: 18.2856px;
     margin-bottom: 1rem;
+    margin-left: 1.4rem;
 }
 
 .buttonsSmall {

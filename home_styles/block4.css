@@ -40,6 +40,10 @@
   height: 45vw;
   position: relative;
   margin: 0 auto;
+  
+  display: flex;
+  justify-content: center;
+
 
 }
 
@@ -78,13 +82,14 @@
   transition: 1.3s ;
   width: 90%;
   height: 100%;
-
 }
 
 
 
 .slider  .item, .slider  .main{
-  width: 95%;
+  width: 80%;
+  margin-top: 4rem;
+  margin-left: 1rem;
 position: absolute;
 display: none;
 background: #e7e7e7;
