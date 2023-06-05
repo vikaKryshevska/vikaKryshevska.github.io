@@ -45,6 +45,7 @@ text-align: start;
   color: #000;
   justify-content: flex-start;
   margin-left: 2rem;
+  margin-top: 4rem;
   width:40%;
   font-weight: 300;
   line-height:1.5;
@@ -113,14 +114,8 @@ text-align: start;
 }
 
 .content .textblock1 {
-  font-family: Cardo, serif;
-  font-weight: 400;
-  justify-content: flex-start;
   width:90%;
   font-size: 1.4rem;
-  font-weight: 300;
-  line-height:1.5;
-  margin: 0;
   margin-left: 1rem;
 }
 
@@ -129,7 +124,7 @@ text-align: start;
   font-size: 1.4rem;
   margin: 0;
   font-weight: 300;
-  margin-top: 21vw;
+  margin-top: 10vw;
   text-align: start;
   margin-left: 1rem;
 }

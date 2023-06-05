@@ -16,14 +16,6 @@
         "element_img": "/new_img/sora_blue.jpeg",
         "element_img1": "/new_img/sora_blue_c.jpeg"    },
 
-    {
-        "id": 3,
-        "name": "Akatsuki Zukuyo",
-        "color": "Blue/Black",
-        "price": 611.63,
-        "element_img": ".\\new_img\\akatsuki_zukuyo_blue.jpeg",
-        "element_img1": ".\\new_img\\akatsuki_zukuyo_blue_c.jpeg"
-    },
 
     {
         "id": 4,

@@ -412,7 +412,11 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 
-
+.elment .name{
+    white-space: pre-wrap;
+    overflow: visible;
+    text-overflow: visible;
+}
 .info .info1 {
     flex-direction: column;
 }

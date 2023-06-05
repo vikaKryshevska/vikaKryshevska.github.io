@@ -18,10 +18,14 @@ function appendData(data) {
   addBuyNowEventListeners();
 }
 
-
+var widthname =15;
+if(window.innerWidth<800){
+  widthname = 34;
+}
 
 function createProductElement(product) {
   const productElement = document.createElement('div');
+
   productElement.classList.add('element');
   productElement.setAttribute('data-id', product.id);
   productElement.innerHTML = `
@@ -34,7 +38,7 @@ function createProductElement(product) {
             </div>
             <div class='info'>
          
-            <div class="name" >${product.name.length > 15 ? product.name.substring(0, 15) + '...' : product.name}</div>
+            <div class="name" title = ${product.name.replaceAll(' ', '_')}>${product.name.length > widthname ? product.name.substring(0, widthname) + '...' : product.name}</div>
              <div class='info1'>
                 <div class="color">${product.color}</div>
                 <div class="year">${product.price}$</div>
@@ -87,6 +91,7 @@ function searchProducts() {
       filteredProducts.forEach(product => {
         const productElement = document.createElement('div');
         productElement.classList.add('element');
+
         productElement.setAttribute('data-id', product.id);
         productElement.innerHTML = `
             <div class='element_img'>
@@ -97,7 +102,7 @@ function searchProducts() {
           </div>
           <div class='info'>
       
-          <div class="name" alt="${product.name}">${product.name.length > 15 ? product.name.substring(0, 15) + '...' : product.name}</div>
+          <div class="name" title = ${product.name.replaceAll(' ', '_')}>${product.name.length > widthname ? product.name.substring(0, widthname) + '...' : product.name}</div>
           <div class='info1'>
               <div class="color">${product.color}</div>
               <div class="year">${product.price}$</div>
@@ -149,7 +154,7 @@ function sortProductsByPriceHighLow() {
 
   productsContainer.innerHTML = '';
   sortedProducts.forEach(product => {
-    const productElement = createProductElement(product);
+    const productElement = createProductElemen(product);
     productsContainer.appendChild(productElement);
   });
   addBuyNowEventListeners();
@@ -176,7 +181,7 @@ function getProductData(productElement) {
 
 
 // Функція створення елемента продукту
-function createProductElement(product) {
+function createProductElemen(product) {
   const productElement = document.createElement('div');
   productElement.classList.add('element');
   productElement.setAttribute('data-id', product.id);
@@ -189,7 +194,7 @@ function createProductElement(product) {
 </div>
 <div class='info'>
 
-<div class="name" alt="${product.name}">${product.name.length > 15 ? product.name.substring(0, 15) + '...' : product.name}</div>
+<div class="name" title = ${product.name}>${product.name.length > widthname ? product.name.substring(0, widthname) + '...' : product.name}</div>
 <div class='info1'>
     <div class="color">${product.color}</div>
     <div class="year">${product.price}$</div>
@@ -324,12 +329,12 @@ maxPriceSlider.addEventListener('input', updateMaxPriceInput);
 
 // Функція оновлення значення текстового поля мінімальної ціни при зміні повзунка
 function updateMinPriceInput() {
-  minPriceInput.value = minPriceSlider.value + "₴";
+  minPriceInput.value = minPriceSlider.value + "$";
 }
 
 // Функція оновлення значення текстового поля максимальної ціни при зміні повзунка
 function updateMaxPriceInput() {
-  maxPriceInput.value = maxPriceSlider.value + "₴";
+  maxPriceInput.value = maxPriceSlider.value + "$";
 }
 
 // Додаємо обробники подій input до текстових полів
@@ -420,7 +425,7 @@ function searchProductsByPrice(products, productsContainer) {
   </div>
   <div class='info'>
   
-  <div class="name" alt="${product.name}">${product.name.length > 15 ? product.name.substring(0, 15) + '...' : product.name}</div>
+  <div class="name" title = ${product.name.replaceAll(' ', '_')}>${product.name.length > widthname ? product.name.substring(0, widthname) + '...' : product.name}</div>
   <div class='info1'>
       <div class="color">${product.color}</div>
       <div class="year">${product.price}$</div>
@@ -511,7 +516,8 @@ function ResetAll() {
   // Очищаємо значення ціни
   document.getElementById('Min').value = '';
   document.getElementById('Max').value = '';
-  document.getElementById('select-color').value = '';
+  document.getElementById('min-price').value = '100';
+  document.getElementById('max-price').value = '1000';
   // Очищаємо контейнер з продуктами
   const productsContainer = document.getElementById('products-list');
   productsContainer.innerHTML = '';
@@ -533,7 +539,7 @@ function ResetAll() {
         </div>
         <div class='info'>
         
-        <div class="name" alt="${product.name}">${product.name.length > 15 ? product.name.substring(0, 15) + '...' : product.name}</div>
+        <div class="name" title = ${product.name.replaceAll(' ', '_')}>${product.name.length > widthname ? product.name.substring(0, widthname) + '...' : product.name}</div>
         <div class='info1'>
             <div class="color">${product.color}</div>
             <div class="year">${product.price}$</div>

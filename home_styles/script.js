@@ -1,4 +1,4 @@
-fetch('products.json')
+fetch('/home_styles/products.json')
             .then(function (response) {
                 return response.json();
             })
@@ -94,7 +94,7 @@ function appendData(data) {
 
 
 
-fetch('slider.json')
+fetch('/home_styles/slider.json')
             .then(function (response) {
                 return response.json();
             })

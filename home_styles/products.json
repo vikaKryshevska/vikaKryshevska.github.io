@@ -16,14 +16,6 @@
         "element_img": "/new_img/sora_blue.jpeg",
         "element_img1": "/new_img/sora_blue_c.jpeg"    },
 
-    {
-        "id": 3,
-        "name": "Akatsuki Zukuyo",
-        "color": "Blue/Black",
-        "price": 611.63,
-        "element_img": ".\\new_img\\akatsuki_zukuyo_blue.jpeg",
-        "element_img1": ".\\new_img\\akatsuki_zukuyo_blue_c.jpeg"
-    },
 
     {
         "id": 4,
@@ -32,6 +24,15 @@
         "price": 467.72,
         "element_img": ".\\new_img\\fubuki_white.jpeg",
         "element_img1": ".\\new_img\\fubuki_white_c.jpeg"
+        },
+        {
+            "id": 7,
+            "name": "Paper Naturally Parasol “Black Bamboo”",
+            "color": "Pink",
+            "price": 215.86,
+            
+            "element_img": ".\\new_img\\unryu_pink.jpeg",
+            "element_img1": ".\\new_img\\unryu_pink_c.jpeg"
         },
 
     {

@@ -90,7 +90,7 @@
 }
 
 .element:hover .element_img:nth-of-type(2) {
-  display: inline-block;
+  display: block;
 }
 
 .element:hover {
