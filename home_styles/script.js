@@ -51,22 +51,22 @@ function appendData(data) {
   const images = document.querySelector('.slider').children;
   let index = 0;
   let data = [];
-  
+
   prev.addEventListener('click', () => {
     nextImage('prev');
   });
-  
+
   next.addEventListener('click', () => {
     nextImage('next');
   });
-  
+
   async function loadImages() {
-    const response = await fetch('slider.json');
+    const response = await fetch('/home_styles/slider.json');
     data = await response.json();
-  
+
     nextImage('next');
   }
-  
+
   function nextImage(direction) {
     if (direction === 'next') {
       index++;
@@ -80,18 +80,17 @@ function appendData(data) {
         index--;
       }
     }
-  
+
     for (let i = 0; i < images.length; i++) {
       images[i].classList.remove('main');
       images[i].classList.remove('fade-in');
     }
-  
+
     images[index].classList.add('main');
     images[index].classList.add('fade-in');
   }  
-  
-  loadImages();
 
+  loadImages();
 
 
 fetch('/home_styles/slider.json')
