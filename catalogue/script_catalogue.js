@@ -1,4 +1,4 @@
-fetch('all_products.json')
+fetch('/catalogue/all_products.json')
   .then(function (response) {
     return response.json();
   })
@@ -74,7 +74,7 @@ function searchProducts() {
   const searchTerm = document.querySelector('.searchTerm').value.toLowerCase();
   const productsContainer = document.getElementById('products-list');
 
-  fetch('all_products.json')
+  fetch('/catalogue/all_products.json')
     .then(response => response.json())
     .then(products => {
       productsContainer.innerHTML = '';
@@ -366,7 +366,7 @@ btn.addEventListener('click', (event) => {
   productsContainer.innerHTML = ""; // Очистити контейнер перед виводом нових продуктів
 
   // Завантажуємо JSON-файл зі списком продуктів
-  fetch('all_products.json')
+  fetch('/catalogue/all_products.json')
     .then(response => response.json())
     .then(products => {
       searchProductsByPrice(products, productsContainer); // Викликаємо функцію для пошуку продуктів за ціною
@@ -382,7 +382,7 @@ btn2.addEventListener('click', (event) => {
   productsContainer.innerHTML = ""; // Очистити контейнер перед виводом нових продуктів
 
   // Завантажуємо JSON-файл зі списком продуктів
-  fetch('all_products.json')
+  fetch('/catalogue/all_products.json')
     .then(response => response.json())
     .then(products => {
       searchProductsByPrice(products, productsContainer); // Викликаємо функцію для пошуку продуктів за ціною
@@ -523,7 +523,7 @@ function ResetAll() {
   productsContainer.innerHTML = '';
 
   // Відновлюємо всі доступні товари
-  fetch('all_products.json')
+  fetch('/catalogue/all_products.json')
     .then(response => response.json())
     .then(products => {
       products.forEach(product => {
@@ -592,6 +592,6 @@ function addBuyNowEventListeners() {
 
 // Функція, яка перенаправляє на нову сторінку з використанням переданого ID
 function redirectToNewPage(productId) {
-  var url = './payment_form.html?id=' + productId;
+  var url = '/payment_form.html?id=' + productId;
   window.open(url, '_self');
 }

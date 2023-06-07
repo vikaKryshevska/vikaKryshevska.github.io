@@ -1,7 +1,7 @@
 // ---------------------- PRODUCT INFO ----------------------
 
 function getProductDetails(productId) {
-    return fetch('all_products.json')
+    return fetch('/catalogue/all_products.json')
         .then(response => response.json())
         .then(products => {
             const parsedProductId = parseInt(productId, 10);
