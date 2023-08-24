@@ -1,14 +1,16 @@
-fetch('/catalogue/all_products.json')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    appendData(data)
-  })
+async function fetchData() {
+  try {
+    const response = await fetch('http://localhost:3100/data');
+    const data = await response.json();
 
-  .catch(function (err) {
-    console.log('error: ' + err);
-  });
+    appendData(data)
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+fetchData();
+
 
 function appendData(data) {
   var productsContainer = document.getElementById('products-list');
@@ -17,6 +19,7 @@ function appendData(data) {
   }
   addBuyNowEventListeners();
 }
+
 
 var widthname =15;
 if(window.innerWidth<800){
@@ -74,7 +77,7 @@ function searchProducts() {
   const searchTerm = document.querySelector('.searchTerm').value.toLowerCase();
   const productsContainer = document.getElementById('products-list');
 
-  fetch('/catalogue/all_products.json')
+  fetch('http://localhost:3100/data')
     .then(response => response.json())
     .then(products => {
       productsContainer.innerHTML = '';
@@ -366,7 +369,7 @@ btn.addEventListener('click', (event) => {
   productsContainer.innerHTML = ""; // Очистити контейнер перед виводом нових продуктів
 
   // Завантажуємо JSON-файл зі списком продуктів
-  fetch('/catalogue/all_products.json')
+  fetch('http://localhost:3100/data')
     .then(response => response.json())
     .then(products => {
       searchProductsByPrice(products, productsContainer); // Викликаємо функцію для пошуку продуктів за ціною
@@ -382,7 +385,7 @@ btn2.addEventListener('click', (event) => {
   productsContainer.innerHTML = ""; // Очистити контейнер перед виводом нових продуктів
 
   // Завантажуємо JSON-файл зі списком продуктів
-  fetch('/catalogue/all_products.json')
+  fetch('http://localhost:3100/data')
     .then(response => response.json())
     .then(products => {
       searchProductsByPrice(products, productsContainer); // Викликаємо функцію для пошуку продуктів за ціною
@@ -518,12 +521,13 @@ function ResetAll() {
   document.getElementById('Max').value = '';
   document.getElementById('min-price').value = '100';
   document.getElementById('max-price').value = '1000';
+  document.getElementById('select-color').value = "";
   // Очищаємо контейнер з продуктами
   const productsContainer = document.getElementById('products-list');
   productsContainer.innerHTML = '';
 
   // Відновлюємо всі доступні товари
-  fetch('/catalogue/all_products.json')
+  fetch('http://localhost:3100/data')
     .then(response => response.json())
     .then(products => {
       products.forEach(product => {
